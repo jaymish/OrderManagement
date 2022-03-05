@@ -1,0 +1,534 @@
+2022-03-05 00:56:00.294 UTC [64] ERROR:  relation "uk_7ks2o42o8wxv36t23kock6sgp" already exists
+2022-03-05 00:56:00.294 UTC [64] STATEMENT:  alter table if exists orders_payment_split add constraint UK_7ks2o42o8wxv36t23kock6sgp unique (payment_split_id)
+2022-03-05 00:56:00.296 UTC [64] ERROR:  constraint "fk2skbk8dcqkds69u75fgnl4blh" for relation "delivery_method" already exists
+2022-03-05 00:56:00.296 UTC [64] STATEMENT:  alter table if exists delivery_method add constraint FK2skbk8dcqkds69u75fgnl4blh foreign key (shippingorpickup_id) references address
+2022-03-05 00:56:00.884 UTC [64] ERROR:  constraint "fkswexg154ooyliexw3a5o3dfvs" for relation "orders_payment_split" already exists
+2022-03-05 00:56:00.884 UTC [64] STATEMENT:  alter table if exists orders_payment_split add constraint FKswexg154ooyliexw3a5o3dfvs foreign key (payment_split_id) references payment_split
+2022-03-05 00:56:01.001 UTC [64] ERROR:  constraint "fksrw1c49d097ejnescpi4x6jb1" for relation "payment" already exists
+2022-03-05 00:56:01.001 UTC [64] STATEMENT:  alter table if exists payment add constraint FKsrw1c49d097ejnescpi4x6jb1 foreign key (billing_id) references address
+2022-03-05 00:56:01.007 UTC [64] ERROR:  constraint "fkfkwgguajcs2vlnji8ujnxn1so" for relation "payment_split" already exists
+2022-03-05 00:56:01.007 UTC [64] STATEMENT:  alter table if exists payment_split add constraint FKfkwgguajcs2vlnji8ujnxn1so foreign key (payment_id) references payment
+2022-03-05 00:56:01.007 UTC [64] ERROR:  constraint "fkfkwgguajcs2vlnji8ujnxn1so" for relation "payment_split" already exists
+2022-03-05 00:56:01.007 UTC [64] STATEMENT:  alter table if exists payment_split add constraint FKfkwgguajcs2vlnji8ujnxn1so foreign key (payment_id) references payment
+2022-03-05 01:18:17.439 UTC [1] LOG:  received fast shutdown request
+2022-03-05 01:18:17.498 UTC [1] LOG:  aborting any active transactions
+2022-03-05 01:18:17.500 UTC [1] LOG:  background worker "logical replication launcher" (PID 27) exited with exit code 1
+2022-03-05 01:18:17.501 UTC [22] LOG:  shutting down
+2022-03-05 01:18:17.763 UTC [1] LOG:  database system is shut down
+2022-03-05 01:21:11.588 UTC [1] LOG:  starting PostgreSQL 13.1 on x86_64-pc-linux-musl, compiled by gcc (Alpine 10.2.1_pre1) 10.2.1 20201203, 64-bit
+2022-03-05 01:21:11.588 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2022-03-05 01:21:11.588 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2022-03-05 01:21:12.044 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2022-03-05 01:21:12.617 UTC [22] LOG:  database system was shut down at 2022-03-05 01:18:17 UTC
+2022-03-05 01:21:12.951 UTC [1] LOG:  database system is ready to accept connections
+2022-03-05 01:21:46.711 UTC [40] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:21:46.711 UTC [40] DETAIL:  Key (typname, typnamespace)=(address, 2200) already exists.
+2022-03-05 01:21:46.711 UTC [40] STATEMENT:  create table address (id varchar(255) not null, addressline1 varchar(255), addressline2 varchar(255), city varchar(255), name varchar(255), state varchar(255), zip int4, primary key (id))
+2022-03-05 01:21:46.727 UTC [59] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:21:46.727 UTC [59] DETAIL:  Key (typname, typnamespace)=(address, 2200) already exists.
+2022-03-05 01:21:46.727 UTC [59] STATEMENT:  create table address (id varchar(255) not null, addressline1 varchar(255), addressline2 varchar(255), city varchar(255), name varchar(255), state varchar(255), zip int4, primary key (id))
+2022-03-05 01:21:46.737 UTC [39] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:21:46.737 UTC [39] DETAIL:  Key (typname, typnamespace)=(address, 2200) already exists.
+2022-03-05 01:21:46.737 UTC [39] STATEMENT:  create table address (id varchar(255) not null, addressline1 varchar(255), addressline2 varchar(255), city varchar(255), name varchar(255), state varchar(255), zip int4, primary key (id))
+2022-03-05 01:21:47.629 UTC [40] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:21:47.629 UTC [40] DETAIL:  Key (typname, typnamespace)=(customer, 2200) already exists.
+2022-03-05 01:21:47.629 UTC [40] STATEMENT:  create table customer (customer_id varchar(255) not null, customer_name varchar(255), email_id varchar(255), primary key (customer_id))
+2022-03-05 01:21:47.629 UTC [39] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:21:47.629 UTC [39] DETAIL:  Key (typname, typnamespace)=(customer, 2200) already exists.
+2022-03-05 01:21:47.629 UTC [39] STATEMENT:  create table customer (customer_id varchar(255) not null, customer_name varchar(255), email_id varchar(255), primary key (customer_id))
+2022-03-05 01:21:47.630 UTC [59] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:21:47.630 UTC [59] DETAIL:  Key (typname, typnamespace)=(customer, 2200) already exists.
+2022-03-05 01:21:47.630 UTC [59] STATEMENT:  create table customer (customer_id varchar(255) not null, customer_name varchar(255), email_id varchar(255), primary key (customer_id))
+2022-03-05 01:21:50.973 UTC [39] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:21:50.973 UTC [39] DETAIL:  Key (typname, typnamespace)=(delivery_method, 2200) already exists.
+2022-03-05 01:21:50.973 UTC [39] STATEMENT:  create table delivery_method (id varchar(255) not null, type varchar(255), shippingorpickup_id varchar(255), primary key (id))
+2022-03-05 01:21:50.973 UTC [59] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:21:50.973 UTC [59] DETAIL:  Key (typname, typnamespace)=(delivery_method, 2200) already exists.
+2022-03-05 01:21:50.973 UTC [59] STATEMENT:  create table delivery_method (id varchar(255) not null, type varchar(255), shippingorpickup_id varchar(255), primary key (id))
+2022-03-05 01:21:50.973 UTC [40] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:21:50.973 UTC [40] DETAIL:  Key (typname, typnamespace)=(delivery_method, 2200) already exists.
+2022-03-05 01:21:50.973 UTC [40] STATEMENT:  create table delivery_method (id varchar(255) not null, type varchar(255), shippingorpickup_id varchar(255), primary key (id))
+2022-03-05 01:21:51.888 UTC [40] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:21:51.888 UTC [40] DETAIL:  Key (typname, typnamespace)=(item, 2200) already exists.
+2022-03-05 01:21:51.888 UTC [40] STATEMENT:  create table item (id varchar(255) not null, item_name varchar(255), item_qty varchar(255), primary key (id))
+2022-03-05 01:21:51.888 UTC [59] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:21:51.888 UTC [59] DETAIL:  Key (typname, typnamespace)=(item, 2200) already exists.
+2022-03-05 01:21:51.888 UTC [59] STATEMENT:  create table item (id varchar(255) not null, item_name varchar(255), item_qty varchar(255), primary key (id))
+2022-03-05 01:21:51.889 UTC [39] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:21:51.889 UTC [39] DETAIL:  Key (typname, typnamespace)=(item, 2200) already exists.
+2022-03-05 01:21:51.889 UTC [39] STATEMENT:  create table item (id varchar(255) not null, item_name varchar(255), item_qty varchar(255), primary key (id))
+2022-03-05 01:21:52.050 UTC [40] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:21:52.050 UTC [40] DETAIL:  Key (typname, typnamespace)=(orders, 2200) already exists.
+2022-03-05 01:21:52.050 UTC [40] STATEMENT:  create table orders (id varchar(255) not null, created_date timestamp, last_modified_date timestamp, order_type varchar(255), shipping_charges float8, status varchar(255), subtotal float8, tax float8, total float8, customer_id varchar(255), delivery_method_id varchar(255), primary key (id))
+2022-03-05 01:21:52.050 UTC [59] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:21:52.050 UTC [59] DETAIL:  Key (typname, typnamespace)=(orders, 2200) already exists.
+2022-03-05 01:21:52.050 UTC [59] STATEMENT:  create table orders (id varchar(255) not null, created_date timestamp, last_modified_date timestamp, order_type varchar(255), shipping_charges float8, status varchar(255), subtotal float8, tax float8, total float8, customer_id varchar(255), delivery_method_id varchar(255), primary key (id))
+2022-03-05 01:21:52.060 UTC [39] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:21:52.060 UTC [39] DETAIL:  Key (typname, typnamespace)=(orders, 2200) already exists.
+2022-03-05 01:21:52.060 UTC [39] STATEMENT:  create table orders (id varchar(255) not null, created_date timestamp, last_modified_date timestamp, order_type varchar(255), shipping_charges float8, status varchar(255), subtotal float8, tax float8, total float8, customer_id varchar(255), delivery_method_id varchar(255), primary key (id))
+2022-03-05 01:21:52.266 UTC [39] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:21:52.266 UTC [39] DETAIL:  Key (typname, typnamespace)=(orders_item_set, 2200) already exists.
+2022-03-05 01:21:52.266 UTC [39] STATEMENT:  create table orders_item_set (orders_id varchar(255) not null, item_set_id varchar(255) not null, primary key (orders_id, item_set_id))
+2022-03-05 01:21:52.266 UTC [59] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:21:52.266 UTC [59] DETAIL:  Key (typname, typnamespace)=(orders_item_set, 2200) already exists.
+2022-03-05 01:21:52.266 UTC [59] STATEMENT:  create table orders_item_set (orders_id varchar(255) not null, item_set_id varchar(255) not null, primary key (orders_id, item_set_id))
+2022-03-05 01:21:52.266 UTC [29] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:21:52.266 UTC [29] DETAIL:  Key (typname, typnamespace)=(orders_item_set, 2200) already exists.
+2022-03-05 01:21:52.266 UTC [29] STATEMENT:  create table orders_item_set (orders_id varchar(255) not null, item_set_id varchar(255) not null, primary key (orders_id, item_set_id))
+2022-03-05 01:21:52.681 UTC [39] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:21:52.681 UTC [39] DETAIL:  Key (typname, typnamespace)=(orders_payment_split, 2200) already exists.
+2022-03-05 01:21:52.681 UTC [39] STATEMENT:  create table orders_payment_split (orders_id varchar(255) not null, payment_split_id varchar(255) not null, primary key (orders_id, payment_split_id))
+2022-03-05 01:21:52.682 UTC [59] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:21:52.682 UTC [59] DETAIL:  Key (typname, typnamespace)=(orders_payment_split, 2200) already exists.
+2022-03-05 01:21:52.682 UTC [59] STATEMENT:  create table orders_payment_split (orders_id varchar(255) not null, payment_split_id varchar(255) not null, primary key (orders_id, payment_split_id))
+2022-03-05 01:21:52.685 UTC [29] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:21:52.685 UTC [29] DETAIL:  Key (typname, typnamespace)=(orders_payment_split, 2200) already exists.
+2022-03-05 01:21:52.685 UTC [29] STATEMENT:  create table orders_payment_split (orders_id varchar(255) not null, payment_split_id varchar(255) not null, primary key (orders_id, payment_split_id))
+2022-03-05 01:21:52.894 UTC [59] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:21:52.894 UTC [59] DETAIL:  Key (typname, typnamespace)=(payment, 2200) already exists.
+2022-03-05 01:21:52.894 UTC [59] STATEMENT:  create table payment (id varchar(255) not null, confirmation_number float8, date timestamp, method varchar(255), billing_id varchar(255), primary key (id))
+2022-03-05 01:21:52.894 UTC [39] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:21:52.894 UTC [39] DETAIL:  Key (typname, typnamespace)=(payment, 2200) already exists.
+2022-03-05 01:21:52.894 UTC [39] STATEMENT:  create table payment (id varchar(255) not null, confirmation_number float8, date timestamp, method varchar(255), billing_id varchar(255), primary key (id))
+2022-03-05 01:21:52.895 UTC [29] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:21:52.895 UTC [29] DETAIL:  Key (typname, typnamespace)=(payment, 2200) already exists.
+2022-03-05 01:21:52.895 UTC [29] STATEMENT:  create table payment (id varchar(255) not null, confirmation_number float8, date timestamp, method varchar(255), billing_id varchar(255), primary key (id))
+2022-03-05 01:21:53.173 UTC [40] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:21:53.173 UTC [40] DETAIL:  Key (typname, typnamespace)=(payment_split, 2200) already exists.
+2022-03-05 01:21:53.173 UTC [40] STATEMENT:  create table payment_split (id varchar(255) not null, paid_amount float8, payment_id varchar(255), primary key (id))
+2022-03-05 01:21:53.173 UTC [39] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:21:53.173 UTC [39] DETAIL:  Key (typname, typnamespace)=(payment_split, 2200) already exists.
+2022-03-05 01:21:53.173 UTC [39] STATEMENT:  create table payment_split (id varchar(255) not null, paid_amount float8, payment_id varchar(255), primary key (id))
+2022-03-05 01:21:53.174 UTC [59] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:21:53.174 UTC [59] DETAIL:  Key (typname, typnamespace)=(payment_split, 2200) already exists.
+2022-03-05 01:21:53.174 UTC [59] STATEMENT:  create table payment_split (id varchar(255) not null, paid_amount float8, payment_id varchar(255), primary key (id))
+2022-03-05 01:21:53.349 UTC [59] ERROR:  relation "uk_chwoksstkyrfpmhul9h8r81tm" already exists
+2022-03-05 01:21:53.349 UTC [59] STATEMENT:  alter table if exists orders_item_set add constraint UK_chwoksstkyrfpmhul9h8r81tm unique (item_set_id)
+2022-03-05 01:21:53.351 UTC [40] ERROR:  relation "uk_chwoksstkyrfpmhul9h8r81tm" already exists
+2022-03-05 01:21:53.351 UTC [40] STATEMENT:  alter table if exists orders_item_set add constraint UK_chwoksstkyrfpmhul9h8r81tm unique (item_set_id)
+2022-03-05 01:21:53.359 UTC [39] ERROR:  relation "uk_chwoksstkyrfpmhul9h8r81tm" already exists
+2022-03-05 01:21:53.359 UTC [39] STATEMENT:  alter table if exists orders_item_set add constraint UK_chwoksstkyrfpmhul9h8r81tm unique (item_set_id)
+2022-03-05 01:21:53.571 UTC [59] ERROR:  relation "uk_7ks2o42o8wxv36t23kock6sgp" already exists
+2022-03-05 01:21:53.571 UTC [59] STATEMENT:  alter table if exists orders_payment_split add constraint UK_7ks2o42o8wxv36t23kock6sgp unique (payment_split_id)
+2022-03-05 01:21:53.574 UTC [40] ERROR:  relation "uk_7ks2o42o8wxv36t23kock6sgp" already exists
+2022-03-05 01:21:53.574 UTC [40] STATEMENT:  alter table if exists orders_payment_split add constraint UK_7ks2o42o8wxv36t23kock6sgp unique (payment_split_id)
+2022-03-05 01:21:53.576 UTC [39] ERROR:  relation "uk_7ks2o42o8wxv36t23kock6sgp" already exists
+2022-03-05 01:21:53.576 UTC [39] STATEMENT:  alter table if exists orders_payment_split add constraint UK_7ks2o42o8wxv36t23kock6sgp unique (payment_split_id)
+2022-03-05 01:21:53.659 UTC [59] ERROR:  constraint "fk2skbk8dcqkds69u75fgnl4blh" for relation "delivery_method" already exists
+2022-03-05 01:21:53.659 UTC [59] STATEMENT:  alter table if exists delivery_method add constraint FK2skbk8dcqkds69u75fgnl4blh foreign key (shippingorpickup_id) references address
+2022-03-05 01:21:53.662 UTC [39] ERROR:  constraint "fk2skbk8dcqkds69u75fgnl4blh" for relation "delivery_method" already exists
+2022-03-05 01:21:53.662 UTC [39] STATEMENT:  alter table if exists delivery_method add constraint FK2skbk8dcqkds69u75fgnl4blh foreign key (shippingorpickup_id) references address
+2022-03-05 01:21:53.663 UTC [40] ERROR:  constraint "fk2skbk8dcqkds69u75fgnl4blh" for relation "delivery_method" already exists
+2022-03-05 01:21:53.663 UTC [40] STATEMENT:  alter table if exists delivery_method add constraint FK2skbk8dcqkds69u75fgnl4blh foreign key (shippingorpickup_id) references address
+2022-03-05 01:21:53.684 UTC [59] ERROR:  constraint "fk624gtjin3po807j3vix093tlf" for relation "orders" already exists
+2022-03-05 01:21:53.684 UTC [59] STATEMENT:  alter table if exists orders add constraint FK624gtjin3po807j3vix093tlf foreign key (customer_id) references customer
+2022-03-05 01:21:53.685 UTC [40] ERROR:  constraint "fk624gtjin3po807j3vix093tlf" for relation "orders" already exists
+2022-03-05 01:21:53.685 UTC [40] STATEMENT:  alter table if exists orders add constraint FK624gtjin3po807j3vix093tlf foreign key (customer_id) references customer
+2022-03-05 01:21:53.686 UTC [39] ERROR:  constraint "fk624gtjin3po807j3vix093tlf" for relation "orders" already exists
+2022-03-05 01:21:53.686 UTC [39] STATEMENT:  alter table if exists orders add constraint FK624gtjin3po807j3vix093tlf foreign key (customer_id) references customer
+2022-03-05 01:21:53.743 UTC [59] ERROR:  constraint "fkq2m2xkvrir0eftwpixx46v9l5" for relation "orders" already exists
+2022-03-05 01:21:53.743 UTC [59] STATEMENT:  alter table if exists orders add constraint FKq2m2xkvrir0eftwpixx46v9l5 foreign key (delivery_method_id) references delivery_method
+2022-03-05 01:21:53.748 UTC [40] ERROR:  constraint "fkq2m2xkvrir0eftwpixx46v9l5" for relation "orders" already exists
+2022-03-05 01:21:53.748 UTC [40] STATEMENT:  alter table if exists orders add constraint FKq2m2xkvrir0eftwpixx46v9l5 foreign key (delivery_method_id) references delivery_method
+2022-03-05 01:21:53.750 UTC [39] ERROR:  constraint "fkq2m2xkvrir0eftwpixx46v9l5" for relation "orders" already exists
+2022-03-05 01:21:53.750 UTC [39] STATEMENT:  alter table if exists orders add constraint FKq2m2xkvrir0eftwpixx46v9l5 foreign key (delivery_method_id) references delivery_method
+2022-03-05 01:21:53.882 UTC [59] ERROR:  constraint "fk9bb4o22wmqwwtq6ibx12siptp" for relation "orders_item_set" already exists
+2022-03-05 01:21:53.882 UTC [59] STATEMENT:  alter table if exists orders_item_set add constraint FK9bb4o22wmqwwtq6ibx12siptp foreign key (item_set_id) references item
+2022-03-05 01:21:53.884 UTC [40] ERROR:  constraint "fk9bb4o22wmqwwtq6ibx12siptp" for relation "orders_item_set" already exists
+2022-03-05 01:21:53.884 UTC [40] STATEMENT:  alter table if exists orders_item_set add constraint FK9bb4o22wmqwwtq6ibx12siptp foreign key (item_set_id) references item
+2022-03-05 01:21:53.885 UTC [39] ERROR:  constraint "fk9bb4o22wmqwwtq6ibx12siptp" for relation "orders_item_set" already exists
+2022-03-05 01:21:53.885 UTC [39] STATEMENT:  alter table if exists orders_item_set add constraint FK9bb4o22wmqwwtq6ibx12siptp foreign key (item_set_id) references item
+2022-03-05 01:21:53.955 UTC [59] ERROR:  constraint "fkgsialahgad5hcoe27ptxa3fqn" for relation "orders_item_set" already exists
+2022-03-05 01:21:53.955 UTC [59] STATEMENT:  alter table if exists orders_item_set add constraint FKgsialahgad5hcoe27ptxa3fqn foreign key (orders_id) references orders
+2022-03-05 01:21:53.956 UTC [39] ERROR:  constraint "fkgsialahgad5hcoe27ptxa3fqn" for relation "orders_item_set" already exists
+2022-03-05 01:21:53.956 UTC [39] STATEMENT:  alter table if exists orders_item_set add constraint FKgsialahgad5hcoe27ptxa3fqn foreign key (orders_id) references orders
+2022-03-05 01:21:53.956 UTC [40] ERROR:  constraint "fkgsialahgad5hcoe27ptxa3fqn" for relation "orders_item_set" already exists
+2022-03-05 01:21:53.956 UTC [40] STATEMENT:  alter table if exists orders_item_set add constraint FKgsialahgad5hcoe27ptxa3fqn foreign key (orders_id) references orders
+2022-03-05 01:21:54.411 UTC [59] ERROR:  constraint "fkswexg154ooyliexw3a5o3dfvs" for relation "orders_payment_split" already exists
+2022-03-05 01:21:54.411 UTC [59] STATEMENT:  alter table if exists orders_payment_split add constraint FKswexg154ooyliexw3a5o3dfvs foreign key (payment_split_id) references payment_split
+2022-03-05 01:21:54.413 UTC [39] ERROR:  constraint "fkswexg154ooyliexw3a5o3dfvs" for relation "orders_payment_split" already exists
+2022-03-05 01:21:54.413 UTC [39] STATEMENT:  alter table if exists orders_payment_split add constraint FKswexg154ooyliexw3a5o3dfvs foreign key (payment_split_id) references payment_split
+2022-03-05 01:21:54.415 UTC [40] ERROR:  constraint "fkswexg154ooyliexw3a5o3dfvs" for relation "orders_payment_split" already exists
+2022-03-05 01:21:54.415 UTC [40] STATEMENT:  alter table if exists orders_payment_split add constraint FKswexg154ooyliexw3a5o3dfvs foreign key (payment_split_id) references payment_split
+2022-03-05 01:21:54.510 UTC [59] ERROR:  constraint "fkrqfjr4rf91gqlm43vbmyap6al" for relation "orders_payment_split" already exists
+2022-03-05 01:21:54.510 UTC [59] STATEMENT:  alter table if exists orders_payment_split add constraint FKrqfjr4rf91gqlm43vbmyap6al foreign key (orders_id) references orders
+2022-03-05 01:21:54.513 UTC [40] ERROR:  constraint "fkrqfjr4rf91gqlm43vbmyap6al" for relation "orders_payment_split" already exists
+2022-03-05 01:21:54.513 UTC [40] STATEMENT:  alter table if exists orders_payment_split add constraint FKrqfjr4rf91gqlm43vbmyap6al foreign key (orders_id) references orders
+2022-03-05 01:21:54.518 UTC [39] ERROR:  constraint "fkrqfjr4rf91gqlm43vbmyap6al" for relation "orders_payment_split" already exists
+2022-03-05 01:21:54.518 UTC [39] STATEMENT:  alter table if exists orders_payment_split add constraint FKrqfjr4rf91gqlm43vbmyap6al foreign key (orders_id) references orders
+2022-03-05 01:21:54.579 UTC [40] ERROR:  constraint "fksrw1c49d097ejnescpi4x6jb1" for relation "payment" already exists
+2022-03-05 01:21:54.579 UTC [40] STATEMENT:  alter table if exists payment add constraint FKsrw1c49d097ejnescpi4x6jb1 foreign key (billing_id) references address
+2022-03-05 01:21:54.581 UTC [59] ERROR:  constraint "fksrw1c49d097ejnescpi4x6jb1" for relation "payment" already exists
+2022-03-05 01:21:54.581 UTC [59] STATEMENT:  alter table if exists payment add constraint FKsrw1c49d097ejnescpi4x6jb1 foreign key (billing_id) references address
+2022-03-05 01:21:54.584 UTC [39] ERROR:  constraint "fksrw1c49d097ejnescpi4x6jb1" for relation "payment" already exists
+2022-03-05 01:21:54.584 UTC [39] STATEMENT:  alter table if exists payment add constraint FKsrw1c49d097ejnescpi4x6jb1 foreign key (billing_id) references address
+2022-03-05 01:21:54.747 UTC [59] ERROR:  constraint "fkfkwgguajcs2vlnji8ujnxn1so" for relation "payment_split" already exists
+2022-03-05 01:21:54.747 UTC [59] STATEMENT:  alter table if exists payment_split add constraint FKfkwgguajcs2vlnji8ujnxn1so foreign key (payment_id) references payment
+2022-03-05 01:21:54.748 UTC [40] ERROR:  constraint "fkfkwgguajcs2vlnji8ujnxn1so" for relation "payment_split" already exists
+2022-03-05 01:21:54.748 UTC [40] STATEMENT:  alter table if exists payment_split add constraint FKfkwgguajcs2vlnji8ujnxn1so foreign key (payment_id) references payment
+2022-03-05 01:21:54.749 UTC [39] ERROR:  constraint "fkfkwgguajcs2vlnji8ujnxn1so" for relation "payment_split" already exists
+2022-03-05 01:21:54.749 UTC [39] STATEMENT:  alter table if exists payment_split add constraint FKfkwgguajcs2vlnji8ujnxn1so foreign key (payment_id) references payment
+2022-03-05 01:24:56.768 UTC [1] LOG:  database system is shut down
+2022-03-05 01:25:35.162 UTC [1] LOG:  starting PostgreSQL 13.1 on x86_64-pc-linux-musl, compiled by gcc (Alpine 10.2.1_pre1) 10.2.1 20201203, 64-bit
+2022-03-05 01:25:35.162 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2022-03-05 01:25:35.162 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2022-03-05 01:25:35.333 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2022-03-05 01:25:35.585 UTC [21] LOG:  database system was shut down at 2022-03-05 01:24:56 UTC
+2022-03-05 01:25:35.643 UTC [1] LOG:  database system is ready to accept connections
+2022-03-05 01:26:18.170 UTC [38] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:26:18.170 UTC [38] DETAIL:  Key (typname, typnamespace)=(address, 2200) already exists.
+2022-03-05 01:26:18.170 UTC [38] STATEMENT:  create table address (id varchar(255) not null, addressline1 varchar(255), addressline2 varchar(255), city varchar(255), name varchar(255), state varchar(255), zip int4, primary key (id))
+2022-03-05 01:26:18.173 UTC [48] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:26:18.173 UTC [48] DETAIL:  Key (typname, typnamespace)=(address, 2200) already exists.
+2022-03-05 01:26:18.173 UTC [48] STATEMENT:  create table address (id varchar(255) not null, addressline1 varchar(255), addressline2 varchar(255), city varchar(255), name varchar(255), state varchar(255), zip int4, primary key (id))
+2022-03-05 01:26:18.175 UTC [28] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:26:18.175 UTC [28] DETAIL:  Key (typname, typnamespace)=(address, 2200) already exists.
+2022-03-05 01:26:18.175 UTC [28] STATEMENT:  create table address (id varchar(255) not null, addressline1 varchar(255), addressline2 varchar(255), city varchar(255), name varchar(255), state varchar(255), zip int4, primary key (id))
+2022-03-05 01:26:19.374 UTC [38] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:26:19.374 UTC [38] DETAIL:  Key (typname, typnamespace)=(customer, 2200) already exists.
+2022-03-05 01:26:19.374 UTC [38] STATEMENT:  create table customer (customer_id varchar(255) not null, customer_name varchar(255), email_id varchar(255), primary key (customer_id))
+2022-03-05 01:26:19.374 UTC [48] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:26:19.374 UTC [48] DETAIL:  Key (typname, typnamespace)=(customer, 2200) already exists.
+2022-03-05 01:26:19.374 UTC [48] STATEMENT:  create table customer (customer_id varchar(255) not null, customer_name varchar(255), email_id varchar(255), primary key (customer_id))
+2022-03-05 01:26:19.377 UTC [28] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:26:19.377 UTC [28] DETAIL:  Key (typname, typnamespace)=(customer, 2200) already exists.
+2022-03-05 01:26:19.377 UTC [28] STATEMENT:  create table customer (customer_id varchar(255) not null, customer_name varchar(255), email_id varchar(255), primary key (customer_id))
+2022-03-05 01:26:19.597 UTC [38] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:26:19.597 UTC [38] DETAIL:  Key (typname, typnamespace)=(delivery_method, 2200) already exists.
+2022-03-05 01:26:19.597 UTC [38] STATEMENT:  create table delivery_method (id varchar(255) not null, type varchar(255), shippingorpickup_id varchar(255), primary key (id))
+2022-03-05 01:26:19.597 UTC [28] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:26:19.597 UTC [28] DETAIL:  Key (typname, typnamespace)=(delivery_method, 2200) already exists.
+2022-03-05 01:26:19.597 UTC [28] STATEMENT:  create table delivery_method (id varchar(255) not null, type varchar(255), shippingorpickup_id varchar(255), primary key (id))
+2022-03-05 01:26:19.598 UTC [48] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:26:19.598 UTC [48] DETAIL:  Key (typname, typnamespace)=(delivery_method, 2200) already exists.
+2022-03-05 01:26:19.598 UTC [48] STATEMENT:  create table delivery_method (id varchar(255) not null, type varchar(255), shippingorpickup_id varchar(255), primary key (id))
+2022-03-05 01:26:19.792 UTC [48] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:26:19.792 UTC [48] DETAIL:  Key (typname, typnamespace)=(item, 2200) already exists.
+2022-03-05 01:26:19.792 UTC [48] STATEMENT:  create table item (id varchar(255) not null, item_name varchar(255), item_qty varchar(255), primary key (id))
+2022-03-05 01:26:19.792 UTC [38] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:26:19.792 UTC [38] DETAIL:  Key (typname, typnamespace)=(item, 2200) already exists.
+2022-03-05 01:26:19.792 UTC [38] STATEMENT:  create table item (id varchar(255) not null, item_name varchar(255), item_qty varchar(255), primary key (id))
+2022-03-05 01:26:19.795 UTC [28] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:26:19.795 UTC [28] DETAIL:  Key (typname, typnamespace)=(item, 2200) already exists.
+2022-03-05 01:26:19.795 UTC [28] STATEMENT:  create table item (id varchar(255) not null, item_name varchar(255), item_qty varchar(255), primary key (id))
+2022-03-05 01:26:20.384 UTC [28] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:26:20.384 UTC [28] DETAIL:  Key (typname, typnamespace)=(orders, 2200) already exists.
+2022-03-05 01:26:20.384 UTC [28] STATEMENT:  create table orders (id varchar(255) not null, created_date timestamp, last_modified_date timestamp, order_type varchar(255), shipping_charges float8, status varchar(255), subtotal float8, tax float8, total float8, customer_id varchar(255), delivery_method_id varchar(255), primary key (id))
+2022-03-05 01:26:20.384 UTC [38] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:26:20.384 UTC [38] DETAIL:  Key (typname, typnamespace)=(orders, 2200) already exists.
+2022-03-05 01:26:20.384 UTC [38] STATEMENT:  create table orders (id varchar(255) not null, created_date timestamp, last_modified_date timestamp, order_type varchar(255), shipping_charges float8, status varchar(255), subtotal float8, tax float8, total float8, customer_id varchar(255), delivery_method_id varchar(255), primary key (id))
+2022-03-05 01:26:20.385 UTC [48] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:26:20.385 UTC [48] DETAIL:  Key (typname, typnamespace)=(orders, 2200) already exists.
+2022-03-05 01:26:20.385 UTC [48] STATEMENT:  create table orders (id varchar(255) not null, created_date timestamp, last_modified_date timestamp, order_type varchar(255), shipping_charges float8, status varchar(255), subtotal float8, tax float8, total float8, customer_id varchar(255), delivery_method_id varchar(255), primary key (id))
+2022-03-05 01:26:20.731 UTC [28] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:26:20.731 UTC [28] DETAIL:  Key (typname, typnamespace)=(orders_item_set, 2200) already exists.
+2022-03-05 01:26:20.731 UTC [28] STATEMENT:  create table orders_item_set (orders_id varchar(255) not null, item_set_id varchar(255) not null, primary key (orders_id, item_set_id))
+2022-03-05 01:26:20.733 UTC [48] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:26:20.733 UTC [48] DETAIL:  Key (typname, typnamespace)=(orders_item_set, 2200) already exists.
+2022-03-05 01:26:20.733 UTC [48] STATEMENT:  create table orders_item_set (orders_id varchar(255) not null, item_set_id varchar(255) not null, primary key (orders_id, item_set_id))
+2022-03-05 01:26:20.731 UTC [38] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:26:20.731 UTC [38] DETAIL:  Key (typname, typnamespace)=(orders_item_set, 2200) already exists.
+2022-03-05 01:26:20.731 UTC [38] STATEMENT:  create table orders_item_set (orders_id varchar(255) not null, item_set_id varchar(255) not null, primary key (orders_id, item_set_id))
+2022-03-05 01:26:21.445 UTC [48] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:26:21.445 UTC [48] DETAIL:  Key (typname, typnamespace)=(orders_payment_split, 2200) already exists.
+2022-03-05 01:26:21.445 UTC [48] STATEMENT:  create table orders_payment_split (orders_id varchar(255) not null, payment_split_id varchar(255) not null, primary key (orders_id, payment_split_id))
+2022-03-05 01:26:21.445 UTC [28] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:26:21.445 UTC [28] DETAIL:  Key (typname, typnamespace)=(orders_payment_split, 2200) already exists.
+2022-03-05 01:26:21.445 UTC [28] STATEMENT:  create table orders_payment_split (orders_id varchar(255) not null, payment_split_id varchar(255) not null, primary key (orders_id, payment_split_id))
+2022-03-05 01:26:21.447 UTC [38] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:26:21.447 UTC [38] DETAIL:  Key (typname, typnamespace)=(orders_payment_split, 2200) already exists.
+2022-03-05 01:26:21.447 UTC [38] STATEMENT:  create table orders_payment_split (orders_id varchar(255) not null, payment_split_id varchar(255) not null, primary key (orders_id, payment_split_id))
+2022-03-05 01:26:21.749 UTC [48] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:26:21.749 UTC [48] DETAIL:  Key (typname, typnamespace)=(payment, 2200) already exists.
+2022-03-05 01:26:21.749 UTC [48] STATEMENT:  create table payment (id varchar(255) not null, confirmation_number float8, date timestamp, method varchar(255), billing_id varchar(255), primary key (id))
+2022-03-05 01:26:21.749 UTC [38] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:26:21.749 UTC [38] DETAIL:  Key (typname, typnamespace)=(payment, 2200) already exists.
+2022-03-05 01:26:21.749 UTC [38] STATEMENT:  create table payment (id varchar(255) not null, confirmation_number float8, date timestamp, method varchar(255), billing_id varchar(255), primary key (id))
+2022-03-05 01:26:21.749 UTC [59] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:26:21.749 UTC [59] DETAIL:  Key (typname, typnamespace)=(payment, 2200) already exists.
+2022-03-05 01:26:21.749 UTC [59] STATEMENT:  create table payment (id varchar(255) not null, confirmation_number float8, date timestamp, method varchar(255), billing_id varchar(255), primary key (id))
+2022-03-05 01:26:22.127 UTC [59] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:26:22.127 UTC [59] DETAIL:  Key (typname, typnamespace)=(payment_split, 2200) already exists.
+2022-03-05 01:26:22.127 UTC [59] STATEMENT:  create table payment_split (id varchar(255) not null, paid_amount float8, payment_id varchar(255), primary key (id))
+2022-03-05 01:26:22.127 UTC [38] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:26:22.127 UTC [38] DETAIL:  Key (typname, typnamespace)=(payment_split, 2200) already exists.
+2022-03-05 01:26:22.127 UTC [38] STATEMENT:  create table payment_split (id varchar(255) not null, paid_amount float8, payment_id varchar(255), primary key (id))
+2022-03-05 01:26:22.127 UTC [48] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:26:22.127 UTC [48] DETAIL:  Key (typname, typnamespace)=(payment_split, 2200) already exists.
+2022-03-05 01:26:22.127 UTC [48] STATEMENT:  create table payment_split (id varchar(255) not null, paid_amount float8, payment_id varchar(255), primary key (id))
+2022-03-05 01:26:22.278 UTC [28] ERROR:  relation "uk_chwoksstkyrfpmhul9h8r81tm" already exists
+2022-03-05 01:26:22.278 UTC [28] STATEMENT:  alter table if exists orders_item_set add constraint UK_chwoksstkyrfpmhul9h8r81tm unique (item_set_id)
+2022-03-05 01:26:22.280 UTC [48] ERROR:  relation "uk_chwoksstkyrfpmhul9h8r81tm" already exists
+2022-03-05 01:26:22.280 UTC [48] STATEMENT:  alter table if exists orders_item_set add constraint UK_chwoksstkyrfpmhul9h8r81tm unique (item_set_id)
+2022-03-05 01:26:22.282 UTC [38] ERROR:  relation "uk_chwoksstkyrfpmhul9h8r81tm" already exists
+2022-03-05 01:26:22.282 UTC [38] STATEMENT:  alter table if exists orders_item_set add constraint UK_chwoksstkyrfpmhul9h8r81tm unique (item_set_id)
+2022-03-05 01:26:22.496 UTC [48] ERROR:  relation "uk_7ks2o42o8wxv36t23kock6sgp" already exists
+2022-03-05 01:26:22.496 UTC [48] STATEMENT:  alter table if exists orders_payment_split add constraint UK_7ks2o42o8wxv36t23kock6sgp unique (payment_split_id)
+2022-03-05 01:26:22.498 UTC [28] ERROR:  relation "uk_7ks2o42o8wxv36t23kock6sgp" already exists
+2022-03-05 01:26:22.498 UTC [28] STATEMENT:  alter table if exists orders_payment_split add constraint UK_7ks2o42o8wxv36t23kock6sgp unique (payment_split_id)
+2022-03-05 01:26:22.499 UTC [38] ERROR:  relation "uk_7ks2o42o8wxv36t23kock6sgp" already exists
+2022-03-05 01:26:22.499 UTC [38] STATEMENT:  alter table if exists orders_payment_split add constraint UK_7ks2o42o8wxv36t23kock6sgp unique (payment_split_id)
+2022-03-05 01:26:22.587 UTC [28] ERROR:  constraint "fk2skbk8dcqkds69u75fgnl4blh" for relation "delivery_method" already exists
+2022-03-05 01:26:22.587 UTC [28] STATEMENT:  alter table if exists delivery_method add constraint FK2skbk8dcqkds69u75fgnl4blh foreign key (shippingorpickup_id) references address
+2022-03-05 01:26:22.587 UTC [48] ERROR:  constraint "fk2skbk8dcqkds69u75fgnl4blh" for relation "delivery_method" already exists
+2022-03-05 01:26:22.587 UTC [48] STATEMENT:  alter table if exists delivery_method add constraint FK2skbk8dcqkds69u75fgnl4blh foreign key (shippingorpickup_id) references address
+2022-03-05 01:26:22.588 UTC [38] ERROR:  constraint "fk2skbk8dcqkds69u75fgnl4blh" for relation "delivery_method" already exists
+2022-03-05 01:26:22.588 UTC [38] STATEMENT:  alter table if exists delivery_method add constraint FK2skbk8dcqkds69u75fgnl4blh foreign key (shippingorpickup_id) references address
+2022-03-05 01:26:22.613 UTC [48] ERROR:  constraint "fk624gtjin3po807j3vix093tlf" for relation "orders" already exists
+2022-03-05 01:26:22.613 UTC [48] STATEMENT:  alter table if exists orders add constraint FK624gtjin3po807j3vix093tlf foreign key (customer_id) references customer
+2022-03-05 01:26:22.615 UTC [28] ERROR:  constraint "fk624gtjin3po807j3vix093tlf" for relation "orders" already exists
+2022-03-05 01:26:22.615 UTC [28] STATEMENT:  alter table if exists orders add constraint FK624gtjin3po807j3vix093tlf foreign key (customer_id) references customer
+2022-03-05 01:26:22.616 UTC [38] ERROR:  constraint "fk624gtjin3po807j3vix093tlf" for relation "orders" already exists
+2022-03-05 01:26:22.616 UTC [38] STATEMENT:  alter table if exists orders add constraint FK624gtjin3po807j3vix093tlf foreign key (customer_id) references customer
+2022-03-05 01:26:22.690 UTC [48] ERROR:  constraint "fkq2m2xkvrir0eftwpixx46v9l5" for relation "orders" already exists
+2022-03-05 01:26:22.690 UTC [48] STATEMENT:  alter table if exists orders add constraint FKq2m2xkvrir0eftwpixx46v9l5 foreign key (delivery_method_id) references delivery_method
+2022-03-05 01:26:22.694 UTC [38] ERROR:  constraint "fkq2m2xkvrir0eftwpixx46v9l5" for relation "orders" already exists
+2022-03-05 01:26:22.694 UTC [38] STATEMENT:  alter table if exists orders add constraint FKq2m2xkvrir0eftwpixx46v9l5 foreign key (delivery_method_id) references delivery_method
+2022-03-05 01:26:22.702 UTC [28] ERROR:  constraint "fkq2m2xkvrir0eftwpixx46v9l5" for relation "orders" already exists
+2022-03-05 01:26:22.702 UTC [28] STATEMENT:  alter table if exists orders add constraint FKq2m2xkvrir0eftwpixx46v9l5 foreign key (delivery_method_id) references delivery_method
+2022-03-05 01:26:23.083 UTC [38] ERROR:  constraint "fk9bb4o22wmqwwtq6ibx12siptp" for relation "orders_item_set" already exists
+2022-03-05 01:26:23.083 UTC [38] STATEMENT:  alter table if exists orders_item_set add constraint FK9bb4o22wmqwwtq6ibx12siptp foreign key (item_set_id) references item
+2022-03-05 01:26:23.085 UTC [48] ERROR:  constraint "fk9bb4o22wmqwwtq6ibx12siptp" for relation "orders_item_set" already exists
+2022-03-05 01:26:23.085 UTC [48] STATEMENT:  alter table if exists orders_item_set add constraint FK9bb4o22wmqwwtq6ibx12siptp foreign key (item_set_id) references item
+2022-03-05 01:26:23.094 UTC [28] ERROR:  constraint "fk9bb4o22wmqwwtq6ibx12siptp" for relation "orders_item_set" already exists
+2022-03-05 01:26:23.094 UTC [28] STATEMENT:  alter table if exists orders_item_set add constraint FK9bb4o22wmqwwtq6ibx12siptp foreign key (item_set_id) references item
+2022-03-05 01:26:23.140 UTC [38] ERROR:  constraint "fkgsialahgad5hcoe27ptxa3fqn" for relation "orders_item_set" already exists
+2022-03-05 01:26:23.140 UTC [38] STATEMENT:  alter table if exists orders_item_set add constraint FKgsialahgad5hcoe27ptxa3fqn foreign key (orders_id) references orders
+2022-03-05 01:26:23.141 UTC [48] ERROR:  constraint "fkgsialahgad5hcoe27ptxa3fqn" for relation "orders_item_set" already exists
+2022-03-05 01:26:23.141 UTC [48] STATEMENT:  alter table if exists orders_item_set add constraint FKgsialahgad5hcoe27ptxa3fqn foreign key (orders_id) references orders
+2022-03-05 01:26:23.155 UTC [28] ERROR:  constraint "fkgsialahgad5hcoe27ptxa3fqn" for relation "orders_item_set" already exists
+2022-03-05 01:26:23.155 UTC [28] STATEMENT:  alter table if exists orders_item_set add constraint FKgsialahgad5hcoe27ptxa3fqn foreign key (orders_id) references orders
+2022-03-05 01:26:23.189 UTC [48] ERROR:  constraint "fkswexg154ooyliexw3a5o3dfvs" for relation "orders_payment_split" already exists
+2022-03-05 01:26:23.189 UTC [48] STATEMENT:  alter table if exists orders_payment_split add constraint FKswexg154ooyliexw3a5o3dfvs foreign key (payment_split_id) references payment_split
+2022-03-05 01:26:23.190 UTC [28] ERROR:  constraint "fkswexg154ooyliexw3a5o3dfvs" for relation "orders_payment_split" already exists
+2022-03-05 01:26:23.190 UTC [28] STATEMENT:  alter table if exists orders_payment_split add constraint FKswexg154ooyliexw3a5o3dfvs foreign key (payment_split_id) references payment_split
+2022-03-05 01:26:23.192 UTC [38] ERROR:  constraint "fkswexg154ooyliexw3a5o3dfvs" for relation "orders_payment_split" already exists
+2022-03-05 01:26:23.192 UTC [38] STATEMENT:  alter table if exists orders_payment_split add constraint FKswexg154ooyliexw3a5o3dfvs foreign key (payment_split_id) references payment_split
+2022-03-05 01:26:23.260 UTC [38] ERROR:  constraint "fkrqfjr4rf91gqlm43vbmyap6al" for relation "orders_payment_split" already exists
+2022-03-05 01:26:23.260 UTC [38] STATEMENT:  alter table if exists orders_payment_split add constraint FKrqfjr4rf91gqlm43vbmyap6al foreign key (orders_id) references orders
+2022-03-05 01:26:23.260 UTC [59] ERROR:  constraint "fkrqfjr4rf91gqlm43vbmyap6al" for relation "orders_payment_split" already exists
+2022-03-05 01:26:23.260 UTC [59] STATEMENT:  alter table if exists orders_payment_split add constraint FKrqfjr4rf91gqlm43vbmyap6al foreign key (orders_id) references orders
+2022-03-05 01:26:23.261 UTC [48] ERROR:  constraint "fkrqfjr4rf91gqlm43vbmyap6al" for relation "orders_payment_split" already exists
+2022-03-05 01:26:23.261 UTC [48] STATEMENT:  alter table if exists orders_payment_split add constraint FKrqfjr4rf91gqlm43vbmyap6al foreign key (orders_id) references orders
+2022-03-05 01:26:23.329 UTC [48] ERROR:  constraint "fksrw1c49d097ejnescpi4x6jb1" for relation "payment" already exists
+2022-03-05 01:26:23.329 UTC [48] STATEMENT:  alter table if exists payment add constraint FKsrw1c49d097ejnescpi4x6jb1 foreign key (billing_id) references address
+2022-03-05 01:26:23.329 UTC [59] ERROR:  constraint "fksrw1c49d097ejnescpi4x6jb1" for relation "payment" already exists
+2022-03-05 01:26:23.329 UTC [59] STATEMENT:  alter table if exists payment add constraint FKsrw1c49d097ejnescpi4x6jb1 foreign key (billing_id) references address
+2022-03-05 01:26:23.330 UTC [38] ERROR:  constraint "fksrw1c49d097ejnescpi4x6jb1" for relation "payment" already exists
+2022-03-05 01:26:23.330 UTC [38] STATEMENT:  alter table if exists payment add constraint FKsrw1c49d097ejnescpi4x6jb1 foreign key (billing_id) references address
+2022-03-05 01:26:23.355 UTC [48] ERROR:  constraint "fkfkwgguajcs2vlnji8ujnxn1so" for relation "payment_split" already exists
+2022-03-05 01:26:23.355 UTC [48] STATEMENT:  alter table if exists payment_split add constraint FKfkwgguajcs2vlnji8ujnxn1so foreign key (payment_id) references payment
+2022-03-05 01:26:23.355 UTC [38] ERROR:  constraint "fkfkwgguajcs2vlnji8ujnxn1so" for relation "payment_split" already exists
+2022-03-05 01:26:23.355 UTC [38] STATEMENT:  alter table if exists payment_split add constraint FKfkwgguajcs2vlnji8ujnxn1so foreign key (payment_id) references payment
+2022-03-05 01:26:23.370 UTC [59] ERROR:  constraint "fkfkwgguajcs2vlnji8ujnxn1so" for relation "payment_split" already exists
+2022-03-05 01:26:23.370 UTC [59] STATEMENT:  alter table if exists payment_split add constraint FKfkwgguajcs2vlnji8ujnxn1so foreign key (payment_id) references payment
+2022-03-05 01:27:54.986 UTC [1] LOG:  database system is shut down
+2022-03-05 01:28:56.656 UTC [1] LOG:  starting PostgreSQL 13.1 on x86_64-pc-linux-musl, compiled by gcc (Alpine 10.2.1_pre1) 10.2.1 20201203, 64-bit
+2022-03-05 01:28:56.656 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2022-03-05 01:28:56.656 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2022-03-05 01:28:56.849 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2022-03-05 01:28:57.081 UTC [21] LOG:  database system was shut down at 2022-03-05 01:27:54 UTC
+2022-03-05 01:28:57.149 UTC [1] LOG:  database system is ready to accept connections
+2022-03-05 01:29:34.196 UTC [59] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:29:34.196 UTC [59] DETAIL:  Key (typname, typnamespace)=(address, 2200) already exists.
+2022-03-05 01:29:34.196 UTC [59] STATEMENT:  create table address (id varchar(255) not null, addressline1 varchar(255), addressline2 varchar(255), city varchar(255), name varchar(255), state varchar(255), zip int4, primary key (id))
+2022-03-05 01:29:34.203 UTC [48] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:29:34.203 UTC [48] DETAIL:  Key (typname, typnamespace)=(address, 2200) already exists.
+2022-03-05 01:29:34.203 UTC [48] STATEMENT:  create table address (id varchar(255) not null, addressline1 varchar(255), addressline2 varchar(255), city varchar(255), name varchar(255), state varchar(255), zip int4, primary key (id))
+2022-03-05 01:29:39.815 UTC [59] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:29:39.815 UTC [59] DETAIL:  Key (typname, typnamespace)=(customer, 2200) already exists.
+2022-03-05 01:29:39.815 UTC [59] STATEMENT:  create table customer (customer_id varchar(255) not null, customer_name varchar(255), email_id varchar(255), primary key (customer_id))
+2022-03-05 01:29:39.817 UTC [38] ERROR:  relation "delivery_method" already exists
+2022-03-05 01:29:39.817 UTC [38] STATEMENT:  create table delivery_method (id varchar(255) not null, type varchar(255), shippingorpickup_id varchar(255), primary key (id))
+2022-03-05 01:29:39.839 UTC [48] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:29:39.839 UTC [48] DETAIL:  Key (typname, typnamespace)=(customer, 2200) already exists.
+2022-03-05 01:29:39.839 UTC [48] STATEMENT:  create table customer (customer_id varchar(255) not null, customer_name varchar(255), email_id varchar(255), primary key (customer_id))
+2022-03-05 01:29:39.840 UTC [59] ERROR:  relation "delivery_method" already exists
+2022-03-05 01:29:39.840 UTC [59] STATEMENT:  create table delivery_method (id varchar(255) not null, type varchar(255), shippingorpickup_id varchar(255), primary key (id))
+2022-03-05 01:29:39.847 UTC [59] ERROR:  relation "item" already exists
+2022-03-05 01:29:39.847 UTC [59] STATEMENT:  create table item (id varchar(255) not null, item_name varchar(255), item_qty varchar(255), primary key (id))
+2022-03-05 01:29:39.854 UTC [48] ERROR:  relation "delivery_method" already exists
+2022-03-05 01:29:39.854 UTC [48] STATEMENT:  create table delivery_method (id varchar(255) not null, type varchar(255), shippingorpickup_id varchar(255), primary key (id))
+2022-03-05 01:29:39.860 UTC [38] ERROR:  relation "item" already exists
+2022-03-05 01:29:39.860 UTC [38] STATEMENT:  create table item (id varchar(255) not null, item_name varchar(255), item_qty varchar(255), primary key (id))
+2022-03-05 01:29:39.863 UTC [48] ERROR:  relation "item" already exists
+2022-03-05 01:29:39.863 UTC [48] STATEMENT:  create table item (id varchar(255) not null, item_name varchar(255), item_qty varchar(255), primary key (id))
+2022-03-05 01:29:41.040 UTC [48] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:29:41.040 UTC [48] DETAIL:  Key (typname, typnamespace)=(orders, 2200) already exists.
+2022-03-05 01:29:41.040 UTC [48] STATEMENT:  create table orders (id varchar(255) not null, created_date timestamp, last_modified_date timestamp, order_type varchar(255), shipping_charges float8, status varchar(255), subtotal float8, tax float8, total float8, customer_id varchar(255), delivery_method_id varchar(255), primary key (id))
+2022-03-05 01:29:41.040 UTC [38] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:29:41.040 UTC [38] DETAIL:  Key (typname, typnamespace)=(orders, 2200) already exists.
+2022-03-05 01:29:41.040 UTC [38] STATEMENT:  create table orders (id varchar(255) not null, created_date timestamp, last_modified_date timestamp, order_type varchar(255), shipping_charges float8, status varchar(255), subtotal float8, tax float8, total float8, customer_id varchar(255), delivery_method_id varchar(255), primary key (id))
+2022-03-05 01:29:41.053 UTC [59] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:29:41.053 UTC [59] DETAIL:  Key (typname, typnamespace)=(orders, 2200) already exists.
+2022-03-05 01:29:41.053 UTC [59] STATEMENT:  create table orders (id varchar(255) not null, created_date timestamp, last_modified_date timestamp, order_type varchar(255), shipping_charges float8, status varchar(255), subtotal float8, tax float8, total float8, customer_id varchar(255), delivery_method_id varchar(255), primary key (id))
+2022-03-05 01:29:41.252 UTC [48] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:29:41.252 UTC [48] DETAIL:  Key (typname, typnamespace)=(orders_item_set, 2200) already exists.
+2022-03-05 01:29:41.252 UTC [48] STATEMENT:  create table orders_item_set (orders_id varchar(255) not null, item_set_id varchar(255) not null, primary key (orders_id, item_set_id))
+2022-03-05 01:29:41.252 UTC [59] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:29:41.252 UTC [59] DETAIL:  Key (typname, typnamespace)=(orders_item_set, 2200) already exists.
+2022-03-05 01:29:41.252 UTC [59] STATEMENT:  create table orders_item_set (orders_id varchar(255) not null, item_set_id varchar(255) not null, primary key (orders_id, item_set_id))
+2022-03-05 01:29:41.253 UTC [38] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:29:41.253 UTC [38] DETAIL:  Key (typname, typnamespace)=(orders_item_set, 2200) already exists.
+2022-03-05 01:29:41.253 UTC [38] STATEMENT:  create table orders_item_set (orders_id varchar(255) not null, item_set_id varchar(255) not null, primary key (orders_id, item_set_id))
+2022-03-05 01:29:41.500 UTC [59] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:29:41.500 UTC [59] DETAIL:  Key (typname, typnamespace)=(orders_payment_split, 2200) already exists.
+2022-03-05 01:29:41.500 UTC [59] STATEMENT:  create table orders_payment_split (orders_id varchar(255) not null, payment_split_id varchar(255) not null, primary key (orders_id, payment_split_id))
+2022-03-05 01:29:41.500 UTC [38] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:29:41.500 UTC [38] DETAIL:  Key (typname, typnamespace)=(orders_payment_split, 2200) already exists.
+2022-03-05 01:29:41.500 UTC [38] STATEMENT:  create table orders_payment_split (orders_id varchar(255) not null, payment_split_id varchar(255) not null, primary key (orders_id, payment_split_id))
+2022-03-05 01:29:41.500 UTC [48] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:29:41.500 UTC [48] DETAIL:  Key (typname, typnamespace)=(orders_payment_split, 2200) already exists.
+2022-03-05 01:29:41.500 UTC [48] STATEMENT:  create table orders_payment_split (orders_id varchar(255) not null, payment_split_id varchar(255) not null, primary key (orders_id, payment_split_id))
+2022-03-05 01:29:42.073 UTC [28] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:29:42.073 UTC [28] DETAIL:  Key (typname, typnamespace)=(payment, 2200) already exists.
+2022-03-05 01:29:42.073 UTC [28] STATEMENT:  create table payment (id varchar(255) not null, confirmation_number float8, date timestamp, method varchar(255), billing_id varchar(255), primary key (id))
+2022-03-05 01:29:42.085 UTC [59] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:29:42.085 UTC [59] DETAIL:  Key (typname, typnamespace)=(payment, 2200) already exists.
+2022-03-05 01:29:42.085 UTC [59] STATEMENT:  create table payment (id varchar(255) not null, confirmation_number float8, date timestamp, method varchar(255), billing_id varchar(255), primary key (id))
+2022-03-05 01:29:42.086 UTC [38] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:29:42.086 UTC [38] DETAIL:  Key (typname, typnamespace)=(payment, 2200) already exists.
+2022-03-05 01:29:42.086 UTC [38] STATEMENT:  create table payment (id varchar(255) not null, confirmation_number float8, date timestamp, method varchar(255), billing_id varchar(255), primary key (id))
+2022-03-05 01:29:42.401 UTC [38] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:29:42.401 UTC [38] DETAIL:  Key (typname, typnamespace)=(payment_split, 2200) already exists.
+2022-03-05 01:29:42.401 UTC [38] STATEMENT:  create table payment_split (id varchar(255) not null, paid_amount float8, payment_id varchar(255), primary key (id))
+2022-03-05 01:29:42.401 UTC [28] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:29:42.401 UTC [28] DETAIL:  Key (typname, typnamespace)=(payment_split, 2200) already exists.
+2022-03-05 01:29:42.401 UTC [28] STATEMENT:  create table payment_split (id varchar(255) not null, paid_amount float8, payment_id varchar(255), primary key (id))
+2022-03-05 01:29:42.402 UTC [59] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:29:42.402 UTC [59] DETAIL:  Key (typname, typnamespace)=(payment_split, 2200) already exists.
+2022-03-05 01:29:42.402 UTC [59] STATEMENT:  create table payment_split (id varchar(255) not null, paid_amount float8, payment_id varchar(255), primary key (id))
+2022-03-05 01:29:42.620 UTC [59] ERROR:  relation "uk_chwoksstkyrfpmhul9h8r81tm" already exists
+2022-03-05 01:29:42.620 UTC [59] STATEMENT:  alter table if exists orders_item_set add constraint UK_chwoksstkyrfpmhul9h8r81tm unique (item_set_id)
+2022-03-05 01:29:42.622 UTC [38] ERROR:  relation "uk_chwoksstkyrfpmhul9h8r81tm" already exists
+2022-03-05 01:29:42.622 UTC [38] STATEMENT:  alter table if exists orders_item_set add constraint UK_chwoksstkyrfpmhul9h8r81tm unique (item_set_id)
+2022-03-05 01:29:42.625 UTC [28] ERROR:  relation "uk_chwoksstkyrfpmhul9h8r81tm" already exists
+2022-03-05 01:29:42.625 UTC [28] STATEMENT:  alter table if exists orders_item_set add constraint UK_chwoksstkyrfpmhul9h8r81tm unique (item_set_id)
+2022-03-05 01:29:43.265 UTC [59] ERROR:  relation "uk_7ks2o42o8wxv36t23kock6sgp" already exists
+2022-03-05 01:29:43.265 UTC [59] STATEMENT:  alter table if exists orders_payment_split add constraint UK_7ks2o42o8wxv36t23kock6sgp unique (payment_split_id)
+2022-03-05 01:29:43.266 UTC [28] ERROR:  relation "uk_7ks2o42o8wxv36t23kock6sgp" already exists
+2022-03-05 01:29:43.266 UTC [28] STATEMENT:  alter table if exists orders_payment_split add constraint UK_7ks2o42o8wxv36t23kock6sgp unique (payment_split_id)
+2022-03-05 01:29:43.268 UTC [38] ERROR:  relation "uk_7ks2o42o8wxv36t23kock6sgp" already exists
+2022-03-05 01:29:43.268 UTC [38] STATEMENT:  alter table if exists orders_payment_split add constraint UK_7ks2o42o8wxv36t23kock6sgp unique (payment_split_id)
+2022-03-05 01:29:43.328 UTC [38] ERROR:  constraint "fk2skbk8dcqkds69u75fgnl4blh" for relation "delivery_method" already exists
+2022-03-05 01:29:43.328 UTC [38] STATEMENT:  alter table if exists delivery_method add constraint FK2skbk8dcqkds69u75fgnl4blh foreign key (shippingorpickup_id) references address
+2022-03-05 01:29:43.330 UTC [59] ERROR:  constraint "fk2skbk8dcqkds69u75fgnl4blh" for relation "delivery_method" already exists
+2022-03-05 01:29:43.330 UTC [59] STATEMENT:  alter table if exists delivery_method add constraint FK2skbk8dcqkds69u75fgnl4blh foreign key (shippingorpickup_id) references address
+2022-03-05 01:29:43.331 UTC [28] ERROR:  constraint "fk2skbk8dcqkds69u75fgnl4blh" for relation "delivery_method" already exists
+2022-03-05 01:29:43.331 UTC [28] STATEMENT:  alter table if exists delivery_method add constraint FK2skbk8dcqkds69u75fgnl4blh foreign key (shippingorpickup_id) references address
+2022-03-05 01:29:43.372 UTC [38] ERROR:  constraint "fk624gtjin3po807j3vix093tlf" for relation "orders" already exists
+2022-03-05 01:29:43.372 UTC [38] STATEMENT:  alter table if exists orders add constraint FK624gtjin3po807j3vix093tlf foreign key (customer_id) references customer
+2022-03-05 01:29:43.380 UTC [59] ERROR:  constraint "fk624gtjin3po807j3vix093tlf" for relation "orders" already exists
+2022-03-05 01:29:43.380 UTC [59] STATEMENT:  alter table if exists orders add constraint FK624gtjin3po807j3vix093tlf foreign key (customer_id) references customer
+2022-03-05 01:29:43.382 UTC [28] ERROR:  constraint "fk624gtjin3po807j3vix093tlf" for relation "orders" already exists
+2022-03-05 01:29:43.382 UTC [28] STATEMENT:  alter table if exists orders add constraint FK624gtjin3po807j3vix093tlf foreign key (customer_id) references customer
+2022-03-05 01:29:43.436 UTC [28] ERROR:  constraint "fkq2m2xkvrir0eftwpixx46v9l5" for relation "orders" already exists
+2022-03-05 01:29:43.436 UTC [28] STATEMENT:  alter table if exists orders add constraint FKq2m2xkvrir0eftwpixx46v9l5 foreign key (delivery_method_id) references delivery_method
+2022-03-05 01:29:43.436 UTC [38] ERROR:  constraint "fkq2m2xkvrir0eftwpixx46v9l5" for relation "orders" already exists
+2022-03-05 01:29:43.436 UTC [38] STATEMENT:  alter table if exists orders add constraint FKq2m2xkvrir0eftwpixx46v9l5 foreign key (delivery_method_id) references delivery_method
+2022-03-05 01:29:43.438 UTC [59] ERROR:  constraint "fkq2m2xkvrir0eftwpixx46v9l5" for relation "orders" already exists
+2022-03-05 01:29:43.438 UTC [59] STATEMENT:  alter table if exists orders add constraint FKq2m2xkvrir0eftwpixx46v9l5 foreign key (delivery_method_id) references delivery_method
+2022-03-05 01:29:43.497 UTC [38] ERROR:  constraint "fk9bb4o22wmqwwtq6ibx12siptp" for relation "orders_item_set" already exists
+2022-03-05 01:29:43.497 UTC [38] STATEMENT:  alter table if exists orders_item_set add constraint FK9bb4o22wmqwwtq6ibx12siptp foreign key (item_set_id) references item
+2022-03-05 01:29:43.499 UTC [59] ERROR:  constraint "fk9bb4o22wmqwwtq6ibx12siptp" for relation "orders_item_set" already exists
+2022-03-05 01:29:43.499 UTC [59] STATEMENT:  alter table if exists orders_item_set add constraint FK9bb4o22wmqwwtq6ibx12siptp foreign key (item_set_id) references item
+2022-03-05 01:29:43.500 UTC [28] ERROR:  constraint "fk9bb4o22wmqwwtq6ibx12siptp" for relation "orders_item_set" already exists
+2022-03-05 01:29:43.500 UTC [28] STATEMENT:  alter table if exists orders_item_set add constraint FK9bb4o22wmqwwtq6ibx12siptp foreign key (item_set_id) references item
+2022-03-05 01:29:43.567 UTC [38] ERROR:  constraint "fkgsialahgad5hcoe27ptxa3fqn" for relation "orders_item_set" already exists
+2022-03-05 01:29:43.567 UTC [38] STATEMENT:  alter table if exists orders_item_set add constraint FKgsialahgad5hcoe27ptxa3fqn foreign key (orders_id) references orders
+2022-03-05 01:29:43.568 UTC [28] ERROR:  constraint "fkgsialahgad5hcoe27ptxa3fqn" for relation "orders_item_set" already exists
+2022-03-05 01:29:43.568 UTC [28] STATEMENT:  alter table if exists orders_item_set add constraint FKgsialahgad5hcoe27ptxa3fqn foreign key (orders_id) references orders
+2022-03-05 01:29:43.569 UTC [59] ERROR:  constraint "fkgsialahgad5hcoe27ptxa3fqn" for relation "orders_item_set" already exists
+2022-03-05 01:29:43.569 UTC [59] STATEMENT:  alter table if exists orders_item_set add constraint FKgsialahgad5hcoe27ptxa3fqn foreign key (orders_id) references orders
+2022-03-05 01:29:43.640 UTC [59] ERROR:  constraint "fkswexg154ooyliexw3a5o3dfvs" for relation "orders_payment_split" already exists
+2022-03-05 01:29:43.640 UTC [59] STATEMENT:  alter table if exists orders_payment_split add constraint FKswexg154ooyliexw3a5o3dfvs foreign key (payment_split_id) references payment_split
+2022-03-05 01:29:43.642 UTC [38] ERROR:  constraint "fkswexg154ooyliexw3a5o3dfvs" for relation "orders_payment_split" already exists
+2022-03-05 01:29:43.642 UTC [38] STATEMENT:  alter table if exists orders_payment_split add constraint FKswexg154ooyliexw3a5o3dfvs foreign key (payment_split_id) references payment_split
+2022-03-05 01:29:43.643 UTC [28] ERROR:  constraint "fkswexg154ooyliexw3a5o3dfvs" for relation "orders_payment_split" already exists
+2022-03-05 01:29:43.643 UTC [28] STATEMENT:  alter table if exists orders_payment_split add constraint FKswexg154ooyliexw3a5o3dfvs foreign key (payment_split_id) references payment_split
+2022-03-05 01:29:43.726 UTC [59] ERROR:  constraint "fkrqfjr4rf91gqlm43vbmyap6al" for relation "orders_payment_split" already exists
+2022-03-05 01:29:43.726 UTC [59] STATEMENT:  alter table if exists orders_payment_split add constraint FKrqfjr4rf91gqlm43vbmyap6al foreign key (orders_id) references orders
+2022-03-05 01:29:43.727 UTC [28] ERROR:  constraint "fkrqfjr4rf91gqlm43vbmyap6al" for relation "orders_payment_split" already exists
+2022-03-05 01:29:43.727 UTC [28] STATEMENT:  alter table if exists orders_payment_split add constraint FKrqfjr4rf91gqlm43vbmyap6al foreign key (orders_id) references orders
+2022-03-05 01:29:43.728 UTC [38] ERROR:  constraint "fkrqfjr4rf91gqlm43vbmyap6al" for relation "orders_payment_split" already exists
+2022-03-05 01:29:43.728 UTC [38] STATEMENT:  alter table if exists orders_payment_split add constraint FKrqfjr4rf91gqlm43vbmyap6al foreign key (orders_id) references orders
+2022-03-05 01:29:43.802 UTC [59] ERROR:  constraint "fksrw1c49d097ejnescpi4x6jb1" for relation "payment" already exists
+2022-03-05 01:29:43.802 UTC [59] STATEMENT:  alter table if exists payment add constraint FKsrw1c49d097ejnescpi4x6jb1 foreign key (billing_id) references address
+2022-03-05 01:29:43.803 UTC [28] ERROR:  constraint "fksrw1c49d097ejnescpi4x6jb1" for relation "payment" already exists
+2022-03-05 01:29:43.803 UTC [28] STATEMENT:  alter table if exists payment add constraint FKsrw1c49d097ejnescpi4x6jb1 foreign key (billing_id) references address
+2022-03-05 01:29:43.805 UTC [38] ERROR:  constraint "fksrw1c49d097ejnescpi4x6jb1" for relation "payment" already exists
+2022-03-05 01:29:43.805 UTC [38] STATEMENT:  alter table if exists payment add constraint FKsrw1c49d097ejnescpi4x6jb1 foreign key (billing_id) references address
+2022-03-05 01:29:43.862 UTC [38] ERROR:  constraint "fkfkwgguajcs2vlnji8ujnxn1so" for relation "payment_split" already exists
+2022-03-05 01:29:43.862 UTC [38] STATEMENT:  alter table if exists payment_split add constraint FKfkwgguajcs2vlnji8ujnxn1so foreign key (payment_id) references payment
+2022-03-05 01:29:43.864 UTC [59] ERROR:  constraint "fkfkwgguajcs2vlnji8ujnxn1so" for relation "payment_split" already exists
+2022-03-05 01:29:43.864 UTC [59] STATEMENT:  alter table if exists payment_split add constraint FKfkwgguajcs2vlnji8ujnxn1so foreign key (payment_id) references payment
+2022-03-05 01:29:43.865 UTC [28] ERROR:  constraint "fkfkwgguajcs2vlnji8ujnxn1so" for relation "payment_split" already exists
+2022-03-05 01:29:43.865 UTC [28] STATEMENT:  alter table if exists payment_split add constraint FKfkwgguajcs2vlnji8ujnxn1so foreign key (payment_id) references payment
+2022-03-05 01:34:18.344 UTC [1] LOG:  starting PostgreSQL 13.1 on x86_64-pc-linux-musl, compiled by gcc (Alpine 10.2.1_pre1) 10.2.1 20201203, 64-bit
+2022-03-05 01:34:18.344 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2022-03-05 01:34:18.344 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2022-03-05 01:34:19.367 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2022-03-05 01:36:07.092 UTC [1] LOG:  starting PostgreSQL 13.1 on x86_64-pc-linux-musl, compiled by gcc (Alpine 10.2.1_pre1) 10.2.1 20201203, 64-bit
+2022-03-05 01:36:07.092 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2022-03-05 01:36:07.092 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2022-03-05 01:36:07.583 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2022-03-05 01:36:07.895 UTC [22] LOG:  database system was shut down at 2022-03-05 01:34:23 UTC
+2022-03-05 01:36:08.417 UTC [1] LOG:  database system is ready to accept connections
+2022-03-05 01:36:56.540 UTC [29] ERROR:  relation "address" does not exist
+2022-03-05 01:36:56.540 UTC [29] STATEMENT:  alter table if exists payment add constraint FKsrw1c49d097ejnescpi4x6jb1 foreign key (billing_id) references address
+2022-03-05 01:37:02.016 UTC [50] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:37:02.016 UTC [50] DETAIL:  Key (typname, typnamespace)=(address, 2200) already exists.
+2022-03-05 01:37:02.016 UTC [50] STATEMENT:  create table address (id varchar(255) not null, addressline1 varchar(255), addressline2 varchar(255), city varchar(255), name varchar(255), state varchar(255), zip int4, primary key (id))
+2022-03-05 01:37:02.383 UTC [50] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:37:02.383 UTC [50] DETAIL:  Key (typname, typnamespace)=(customer, 2200) already exists.
+2022-03-05 01:37:02.383 UTC [50] STATEMENT:  create table customer (customer_id varchar(255) not null, customer_name varchar(255), email_id varchar(255), primary key (customer_id))
+2022-03-05 01:37:02.660 UTC [50] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:37:02.660 UTC [50] DETAIL:  Key (typname, typnamespace)=(delivery_method, 2200) already exists.
+2022-03-05 01:37:02.660 UTC [50] STATEMENT:  create table delivery_method (id varchar(255) not null, type varchar(255), shippingorpickup_id varchar(255), primary key (id))
+2022-03-05 01:37:03.096 UTC [50] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:37:03.096 UTC [50] DETAIL:  Key (typname, typnamespace)=(item, 2200) already exists.
+2022-03-05 01:37:03.096 UTC [50] STATEMENT:  create table item (id varchar(255) not null, item_name varchar(255), item_qty varchar(255), primary key (id))
+2022-03-05 01:37:03.368 UTC [40] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:37:03.368 UTC [40] DETAIL:  Key (typname, typnamespace)=(orders, 2200) already exists.
+2022-03-05 01:37:03.368 UTC [40] STATEMENT:  create table orders (id varchar(255) not null, created_date timestamp, last_modified_date timestamp, order_type varchar(255), shipping_charges float8, status varchar(255), subtotal float8, tax float8, total float8, customer_id varchar(255), delivery_method_id varchar(255), primary key (id))
+2022-03-05 01:37:03.989 UTC [40] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:37:03.989 UTC [40] DETAIL:  Key (typname, typnamespace)=(orders_item_set, 2200) already exists.
+2022-03-05 01:37:03.989 UTC [40] STATEMENT:  create table orders_item_set (orders_id varchar(255) not null, item_set_id varchar(255) not null, primary key (orders_id, item_set_id))
+2022-03-05 01:37:04.249 UTC [40] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:37:04.249 UTC [40] DETAIL:  Key (typname, typnamespace)=(orders_payment_split, 2200) already exists.
+2022-03-05 01:37:04.249 UTC [40] STATEMENT:  create table orders_payment_split (orders_id varchar(255) not null, payment_split_id varchar(255) not null, primary key (orders_id, payment_split_id))
+2022-03-05 01:37:04.720 UTC [40] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:37:04.720 UTC [40] DETAIL:  Key (typname, typnamespace)=(payment, 2200) already exists.
+2022-03-05 01:37:04.720 UTC [40] STATEMENT:  create table payment (id varchar(255) not null, confirmation_number float8, date timestamp, method varchar(255), billing_id varchar(255), primary key (id))
+2022-03-05 01:37:06.324 UTC [40] ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+2022-03-05 01:37:06.324 UTC [40] DETAIL:  Key (typname, typnamespace)=(payment_split, 2200) already exists.
+2022-03-05 01:37:06.324 UTC [40] STATEMENT:  create table payment_split (id varchar(255) not null, paid_amount float8, payment_id varchar(255), primary key (id))
+2022-03-05 01:37:07.260 UTC [40] ERROR:  relation "uk_chwoksstkyrfpmhul9h8r81tm" already exists
+2022-03-05 01:37:07.260 UTC [40] STATEMENT:  alter table if exists orders_item_set add constraint UK_chwoksstkyrfpmhul9h8r81tm unique (item_set_id)
+2022-03-05 01:37:08.300 UTC [40] ERROR:  relation "uk_7ks2o42o8wxv36t23kock6sgp" already exists
+2022-03-05 01:37:08.300 UTC [40] STATEMENT:  alter table if exists orders_payment_split add constraint UK_7ks2o42o8wxv36t23kock6sgp unique (payment_split_id)
+2022-03-05 01:37:08.721 UTC [40] ERROR:  constraint "fk2skbk8dcqkds69u75fgnl4blh" for relation "delivery_method" already exists
+2022-03-05 01:37:08.721 UTC [40] STATEMENT:  alter table if exists delivery_method add constraint FK2skbk8dcqkds69u75fgnl4blh foreign key (shippingorpickup_id) references address
+2022-03-05 01:37:09.103 UTC [40] ERROR:  constraint "fk624gtjin3po807j3vix093tlf" for relation "orders" already exists
+2022-03-05 01:37:09.103 UTC [40] STATEMENT:  alter table if exists orders add constraint FK624gtjin3po807j3vix093tlf foreign key (customer_id) references customer
+2022-03-05 01:37:09.710 UTC [40] ERROR:  constraint "fkq2m2xkvrir0eftwpixx46v9l5" for relation "orders" already exists
+2022-03-05 01:37:09.710 UTC [40] STATEMENT:  alter table if exists orders add constraint FKq2m2xkvrir0eftwpixx46v9l5 foreign key (delivery_method_id) references delivery_method
+2022-03-05 01:37:10.682 UTC [40] ERROR:  constraint "fk9bb4o22wmqwwtq6ibx12siptp" for relation "orders_item_set" already exists
+2022-03-05 01:37:10.682 UTC [40] STATEMENT:  alter table if exists orders_item_set add constraint FK9bb4o22wmqwwtq6ibx12siptp foreign key (item_set_id) references item
+2022-03-05 01:37:10.868 UTC [40] ERROR:  constraint "fkgsialahgad5hcoe27ptxa3fqn" for relation "orders_item_set" already exists
+2022-03-05 01:37:10.868 UTC [40] STATEMENT:  alter table if exists orders_item_set add constraint FKgsialahgad5hcoe27ptxa3fqn foreign key (orders_id) references orders
+2022-03-05 01:37:10.984 UTC [40] ERROR:  constraint "fkswexg154ooyliexw3a5o3dfvs" for relation "orders_payment_split" already exists
+2022-03-05 01:37:10.984 UTC [40] STATEMENT:  alter table if exists orders_payment_split add constraint FKswexg154ooyliexw3a5o3dfvs foreign key (payment_split_id) references payment_split
+2022-03-05 01:37:11.372 UTC [40] ERROR:  constraint "fkrqfjr4rf91gqlm43vbmyap6al" for relation "orders_payment_split" already exists
+2022-03-05 01:37:11.372 UTC [40] STATEMENT:  alter table if exists orders_payment_split add constraint FKrqfjr4rf91gqlm43vbmyap6al foreign key (orders_id) references orders
+2022-03-05 01:37:11.460 UTC [50] ERROR:  relation "address" does not exist
+2022-03-05 01:37:11.460 UTC [50] STATEMENT:  alter table if exists payment add constraint FKsrw1c49d097ejnescpi4x6jb1 foreign key (billing_id) references address
+2022-03-05 01:37:11.462 UTC [40] ERROR:  relation "address" does not exist
+2022-03-05 01:37:11.462 UTC [40] STATEMENT:  alter table if exists payment add constraint FKsrw1c49d097ejnescpi4x6jb1 foreign key (billing_id) references address
+2022-03-05 01:37:11.486 UTC [40] ERROR:  constraint "fkfkwgguajcs2vlnji8ujnxn1so" for relation "payment_split" already exists
+2022-03-05 01:37:11.486 UTC [40] STATEMENT:  alter table if exists payment_split add constraint FKfkwgguajcs2vlnji8ujnxn1so foreign key (payment_id) references payment
+2022-03-05 01:40:05.668 UTC [1] LOG:  received fast shutdown request
+2022-03-05 01:40:05.704 UTC [1] LOG:  aborting any active transactions
+2022-03-05 01:40:05.706 UTC [1] LOG:  background worker "logical replication launcher" (PID 28) exited with exit code 1
+2022-03-05 01:40:05.709 UTC [23] LOG:  shutting down
+2022-03-05 01:40:14.948 UTC [1] LOG:  database system is shut down

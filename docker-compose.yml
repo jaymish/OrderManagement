@@ -1,4 +1,4 @@
-
+#docker-compose up -d --build
 version: '3.2'
 
 services:
@@ -24,10 +24,10 @@ services:
       - MAX_SIZE=50
       - MAX_AGE=20
       - DEBUG=false
-    #            - TIME_ZONE=America/Chicago
+      - TIME_ZONE=America/Los_Angeles
 
     volumes:
-      - ./logs:/srv/logs
+      - ./log:/srv/logs
       - /var/run/docker.sock:/var/run/docker.sock
 
   zoo:
@@ -37,6 +37,8 @@ services:
     restart: unless-stopped
     ports:
       - "2183:2183"
+    depends_on:
+      - logger
     environment:
       ZOOKEEPER_CLIENT_PORT: 2183
       ZOOKEEPER_SERVER_ID: 1
@@ -44,6 +46,7 @@ services:
       ZOOKEEPER_INIT_LIMIT: 5
       ZOOKEEPER_SYNC_LIMIT: 2
       ZOOKEEPER_SERVERS: server.1=zoo:2888:3888
+      TZ: America/Los_Angeles
     volumes:
       - ./bootcamp/zoo/data:/data
       - ./bootcamp/zoo/datalog:/datalog
@@ -62,10 +65,12 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      TZ: America/Los_Angeles
     volumes:
       - ./bootcamp/kafka/data:/lib/kafka/data
     depends_on:
       - zoo
+      - logger
       
 
   db:
@@ -73,10 +78,13 @@ services:
     container_name: orderdb
     ports:
       - "5433:5432"
+    depends_on:
+      - logger
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=123456
       - POSTGRES_DB=orderdb
+      - TZ=America/Los_Angeles
   
   consumerorder:
     # build from Dockerfile
@@ -86,6 +94,7 @@ services:
     ports:
       - "8081:8081"
     depends_on:
+      - logger
       - db
     environment:
       - SPRING_DATABASE_URL=jdbc:postgresql://db:5432/orderdb
@@ -93,6 +102,8 @@ services:
       - SPRING_DATABASE_PASSWORD=123456
       - GMAIL_USER=jaymishptl@gmail.com
       - GMAIL_PASSWORD=dubxclrrxluaiimd
+      - TZ=America/Los_Angeles
+      
       
   producerorder:
     # build from Dockerfile
@@ -102,6 +113,7 @@ services:
     ports:
       - "8080:8080"
     depends_on:
+      - logger
       - db
       - consumerorder
     environment:
@@ -111,6 +123,7 @@ services:
       - GMAIL_USER=jaymishptl@gmail.com
       - GMAIL_PASSWORD=dubxclrrxluaiimd
       - URL_TO_CONSUMER=http://consumerorder:8081/Order
+      - TZ=America/Los_Angeles
   
   consumerorderkafka:
     # build from Dockerfile
@@ -120,6 +133,7 @@ services:
     ports:
       - "8084:8084"
     depends_on:
+      - logger
       - db
       - kafka
     environment:
@@ -135,6 +149,7 @@ services:
       - KAFKA_UPDATE_GROUPID=orderupdategroup
       - KAFKA_STRING_NAME=order-string
       - KAFKA_STRING_GROUPID=orderstringgroup
+      - TZ=America/Los_Angeles
       
   producerorderkafka:
     # build from Dockerfile
@@ -144,6 +159,7 @@ services:
     ports:
       - "8083:8083"
     depends_on:
+      - logger
       - db
       - kafka
       - consumerorderkafka
@@ -160,4 +176,5 @@ services:
       - KAFKA_UPDATE_GROUPID=orderupdategroup
       - KAFKA_STRING_NAME=order-string
       - KAFKA_STRING_GROUPID=orderstringgroup
+      - TZ=America/Los_Angeles
   

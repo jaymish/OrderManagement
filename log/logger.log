@@ -1,0 +1,167 @@
+2022/03/05 01:12:37.120 [INFO]  {logger} start log streamer for consumerorderkafka
+2022/03/05 01:12:37.120 [INFO]  {app} loggers created for logs/consumerorder.log and logs/consumerorder.err, max.size=50M, max.files=10, max.days=20
+2022/03/05 01:12:37.121 [INFO]  {logger} start log streamer for consumerorder
+2022/03/05 01:12:37.121 [INFO]  {app} loggers created for logs/kafkafororder.log and logs/kafkafororder.err, max.size=50M, max.files=10, max.days=20
+2022/03/05 01:12:37.121 [INFO]  {logger} start log streamer for kafkafororder
+2022/03/05 01:12:37.121 [INFO]  {app} loggers created for logs/zoofororder.log and logs/zoofororder.err, max.size=50M, max.files=10, max.days=20
+2022/03/05 01:12:37.121 [INFO]  {logger} start log streamer for zoofororder
+2022/03/05 01:12:37.121 [INFO]  {app} loggers created for logs/orderdb.log and logs/orderdb.err, max.size=50M, max.files=10, max.days=20
+2022/03/05 01:12:37.121 [INFO]  {logger} start log streamer for orderdb
+2022/03/05 01:12:37.436 [INFO]  {discovery} new event {ContainerID:8bd99cd551131996c83fe1ddf00fbe815f962759a5d81b6385c28f0613ea5fdb ContainerName:logger Group: TS:2022-03-24 02:33:19.425840978 +0000 UTC Status:true}
+2022/03/05 01:12:37.439 [INFO]  {app} loggers created for logs/logger.log and logs/logger.err, max.size=50M, max.files=10, max.days=20
+2022/03/05 01:12:37.439 [INFO]  {logger} start log streamer for logger
+2022/03/05 01:12:37.925 [INFO]  {discovery} new event {ContainerID:96c8c396d538776c1f6407346f7bb157bc616707c0341088424da9c368a36a0a ContainerName:96c8c396d538_logger Group: TS:2022-03-24 02:33:19.924611307 +0000 UTC Status:false}
+Sat Mar  5 01:21:07 UTC 2022
+docker-logger --
+2022/03/05 01:21:07.810 [INFO]  {app} options: {DockerHost:unix:///var/run/docker.sock EnableSyslog:false SyslogHost:127.0.0.1:514 SyslogPrefix:docker/ EnableFiles:true MaxFileSize:50 MaxFilesCount:10 MaxFilesAge:20 MixErr:false FilesLocation:logs Excludes:[docker-logger] Includes:[] IncludesPattern: ExtJSON:false Dbg:false}
+2022/03/05 01:21:07.812 [INFO]  {app} loggers created for logs/zoofororder.log and logs/zoofororder.err, max.size=50M, max.files=10, max.days=20
+2022/03/05 01:21:07.812 [INFO]  {logger} start log streamer for zoofororder
+2022/03/05 01:21:07.812 [INFO]  {app} loggers created for logs/orderdb.log and logs/orderdb.err, max.size=50M, max.files=10, max.days=20
+2022/03/05 01:21:07.812 [INFO]  {logger} start log streamer for orderdb
+2022/03/05 01:21:08.218 [INFO]  {discovery} new event {ContainerID:a4e09310535e2022b4eb4b12650f14582ed7254cb4a08a71fe0d12efc9bf2474 ContainerName:logger Group: TS:2022-03-24 02:41:51.217650411 +0000 UTC Status:true}
+2022/03/05 01:21:08.218 [INFO]  {app} loggers created for logs/logger.log and logs/logger.err, max.size=50M, max.files=10, max.days=20
+2022/03/05 01:21:08.218 [INFO]  {logger} start log streamer for logger
+2022/03/05 01:21:08.682 [INFO]  {discovery} new event {ContainerID:8bd99cd551131996c83fe1ddf00fbe815f962759a5d81b6385c28f0613ea5fdb ContainerName:8bd99cd55113_logger Group: TS:2022-03-24 02:41:51.682150769 +0000 UTC Status:false}
+2022/03/05 01:21:09.668 [INFO]  {discovery} new event {ContainerID:a63e63a83c9d21fe92fb3c748e63a5b336f627b09adc5b737e21ea4dae329960 ContainerName:consumerorder Group: TS:2022-03-24 02:41:52.6679232 +0000 UTC Status:true}
+2022/03/05 01:21:09.668 [INFO]  {app} loggers created for logs/consumerorder.log and logs/consumerorder.err, max.size=50M, max.files=10, max.days=20
+2022/03/05 01:21:09.668 [INFO]  {logger} start log streamer for consumerorder
+2022/03/05 01:21:10.504 [INFO]  {discovery} new event {ContainerID:391e28dd5cd6210d52d65883fd3aad62fbd3806a013c1fee7731307538139761 ContainerName:kafkafororder Group: TS:2022-03-24 02:41:53.504187023 +0000 UTC Status:true}
+2022/03/05 01:21:10.504 [INFO]  {app} loggers created for logs/kafkafororder.log and logs/kafkafororder.err, max.size=50M, max.files=10, max.days=20
+2022/03/05 01:21:10.504 [INFO]  {logger} start log streamer for kafkafororder
+2022/03/05 01:21:15.284 [INFO]  {discovery} new event {ContainerID:f399b232392fe6609cb8cb75393b75f4ec0901035ce2cd6aa7ef3325344c4b90 ContainerName:producerorder Group: TS:2022-03-24 02:41:58.284518601 +0000 UTC Status:true}
+2022/03/05 01:21:15.284 [INFO]  {app} loggers created for logs/producerorder.log and logs/producerorder.err, max.size=50M, max.files=10, max.days=20
+2022/03/05 01:21:15.284 [INFO]  {logger} start log streamer for producerorder
+2022/03/05 01:21:15.408 [INFO]  {discovery} new event {ContainerID:6aa9e624e747195f382b4ccd5368bf1b6406a2d4103a30ae98499b32face58e5 ContainerName:consumerorderkafka Group: TS:2022-03-24 02:41:58.406424296 +0000 UTC Status:true}
+2022/03/05 01:21:15.409 [INFO]  {app} loggers created for logs/consumerorderkafka.log and logs/consumerorderkafka.err, max.size=50M, max.files=10, max.days=20
+2022/03/05 01:21:15.409 [INFO]  {logger} start log streamer for consumerorderkafka
+2022/03/05 01:21:18.279 [INFO]  {discovery} new event {ContainerID:5356ad582c2477eeec570244e8e96a4f17277fd2581649bf0d1346f75f8180e5 ContainerName:producerorderkafka Group: TS:2022-03-24 02:42:01.279491785 +0000 UTC Status:true}
+2022/03/05 01:21:18.280 [INFO]  {app} loggers created for logs/producerorderkafka.log and logs/producerorderkafka.err, max.size=50M, max.files=10, max.days=20
+2022/03/05 01:21:18.280 [INFO]  {logger} start log streamer for producerorderkafka
+Fri Mar  4 19:25:35 CST 2022
+docker-logger --
+2022/03/04 19:25:35.753 [INFO]  {app} options: {DockerHost:unix:///var/run/docker.sock EnableSyslog:false SyslogHost:127.0.0.1:514 SyslogPrefix:docker/ EnableFiles:true MaxFileSize:50 MaxFilesCount:10 MaxFilesAge:20 MixErr:false FilesLocation:logs Excludes:[docker-logger] Includes:[] IncludesPattern: ExtJSON:false Dbg:false}
+2022/03/04 19:25:35.755 [INFO]  {app} loggers created for logs/zoofororder.log and logs/zoofororder.err, max.size=50M, max.files=10, max.days=20
+2022/03/04 19:25:35.755 [INFO]  {logger} start log streamer for zoofororder
+2022/03/04 19:25:35.755 [INFO]  {app} loggers created for logs/orderdb.log and logs/orderdb.err, max.size=50M, max.files=10, max.days=20
+2022/03/04 19:25:35.755 [INFO]  {logger} start log streamer for orderdb
+2022/03/04 19:25:36.229 [INFO]  {discovery} new event {ContainerID:63b6fba2c0e92232df132c25069c9c807a70529ff771e59aee213482acdf9a71 ContainerName:logger Group: TS:2022-03-23 21:46:19.229379285 -0500 CDT Status:true}
+2022/03/04 19:25:36.230 [INFO]  {app} loggers created for logs/logger.log and logs/logger.err, max.size=50M, max.files=10, max.days=20
+2022/03/04 19:25:36.230 [INFO]  {logger} start log streamer for logger
+2022/03/04 19:25:36.380 [INFO]  {discovery} new event {ContainerID:a4e09310535e2022b4eb4b12650f14582ed7254cb4a08a71fe0d12efc9bf2474 ContainerName:a4e09310535e_logger Group: TS:2022-03-23 21:46:19.379787448 -0500 CDT Status:false}
+2022/03/04 19:25:37.804 [INFO]  {discovery} new event {ContainerID:a63e63a83c9d21fe92fb3c748e63a5b336f627b09adc5b737e21ea4dae329960 ContainerName:consumerorder Group: TS:2022-03-23 21:46:20.804252133 -0500 CDT Status:true}
+2022/03/04 19:25:37.804 [INFO]  {app} loggers created for logs/consumerorder.log and logs/consumerorder.err, max.size=50M, max.files=10, max.days=20
+2022/03/04 19:25:37.804 [INFO]  {logger} start log streamer for consumerorder
+2022/03/04 19:25:37.906 [INFO]  {discovery} new event {ContainerID:391e28dd5cd6210d52d65883fd3aad62fbd3806a013c1fee7731307538139761 ContainerName:kafkafororder Group: TS:2022-03-23 21:46:20.904928109 -0500 CDT Status:true}
+2022/03/04 19:25:37.906 [INFO]  {app} loggers created for logs/kafkafororder.log and logs/kafkafororder.err, max.size=50M, max.files=10, max.days=20
+2022/03/04 19:25:37.906 [INFO]  {logger} start log streamer for kafkafororder
+2022/03/04 19:25:39.581 [INFO]  {discovery} new event {ContainerID:f399b232392fe6609cb8cb75393b75f4ec0901035ce2cd6aa7ef3325344c4b90 ContainerName:producerorder Group: TS:2022-03-23 21:46:22.58041369 -0500 CDT Status:true}
+2022/03/04 19:25:39.582 [INFO]  {app} loggers created for logs/producerorder.log and logs/producerorder.err, max.size=50M, max.files=10, max.days=20
+2022/03/04 19:25:39.582 [INFO]  {logger} start log streamer for producerorder
+2022/03/04 19:25:40.055 [INFO]  {discovery} new event {ContainerID:6aa9e624e747195f382b4ccd5368bf1b6406a2d4103a30ae98499b32face58e5 ContainerName:consumerorderkafka Group: TS:2022-03-23 21:46:23.055276757 -0500 CDT Status:true}
+2022/03/04 19:25:40.056 [INFO]  {app} loggers created for logs/consumerorderkafka.log and logs/consumerorderkafka.err, max.size=50M, max.files=10, max.days=20
+2022/03/04 19:25:40.056 [INFO]  {logger} start log streamer for consumerorderkafka
+2022/03/04 19:25:42.111 [INFO]  {discovery} new event {ContainerID:5356ad582c2477eeec570244e8e96a4f17277fd2581649bf0d1346f75f8180e5 ContainerName:producerorderkafka Group: TS:2022-03-23 21:46:25.110119081 -0500 CDT Status:true}
+2022/03/04 19:25:42.111 [INFO]  {app} loggers created for logs/producerorderkafka.log and logs/producerorderkafka.err, max.size=50M, max.files=10, max.days=20
+2022/03/04 19:25:42.111 [INFO]  {logger} start log streamer for producerorderkafka
+timezone=America/Los_Angeles
+Fri Mar  4 17:28:58 PST 2022
+docker-logger --
+2022/03/04 17:28:58.398 [INFO]  {app} options: {DockerHost:unix:///var/run/docker.sock EnableSyslog:false SyslogHost:127.0.0.1:514 SyslogPrefix:docker/ EnableFiles:true MaxFileSize:50 MaxFilesCount:10 MaxFilesAge:20 MixErr:false FilesLocation:logs Excludes:[docker-logger] Includes:[] IncludesPattern: ExtJSON:false Dbg:false}
+2022/03/04 17:28:58.401 [INFO]  {app} loggers created for logs/zoofororder.log and logs/zoofororder.err, max.size=50M, max.files=10, max.days=20
+2022/03/04 17:28:58.401 [INFO]  {logger} start log streamer for zoofororder
+2022/03/04 17:28:58.401 [INFO]  {app} loggers created for logs/orderdb.log and logs/orderdb.err, max.size=50M, max.files=10, max.days=20
+2022/03/04 17:28:58.401 [INFO]  {logger} start log streamer for orderdb
+2022/03/04 17:28:59.244 [INFO]  {discovery} new event {ContainerID:e4c8ae24d3b4140bd6f1c8978f0fbe7d22ed4d50748fd165c3b5c45734fce034 ContainerName:logger Group: TS:2022-03-23 19:49:42.243392053 -0700 PDT Status:true}
+2022/03/04 17:28:59.244 [INFO]  {app} loggers created for logs/logger.log and logs/logger.err, max.size=50M, max.files=10, max.days=20
+2022/03/04 17:28:59.244 [INFO]  {logger} start log streamer for logger
+2022/03/04 17:28:59.535 [INFO]  {discovery} new event {ContainerID:a63e63a83c9d21fe92fb3c748e63a5b336f627b09adc5b737e21ea4dae329960 ContainerName:consumerorder Group: TS:2022-03-23 19:49:42.521275303 -0700 PDT Status:true}
+2022/03/04 17:28:59.535 [INFO]  {app} loggers created for logs/consumerorder.log and logs/consumerorder.err, max.size=50M, max.files=10, max.days=20
+2022/03/04 17:28:59.535 [INFO]  {logger} start log streamer for consumerorder
+2022/03/04 17:28:59.644 [INFO]  {discovery} new event {ContainerID:63b6fba2c0e92232df132c25069c9c807a70529ff771e59aee213482acdf9a71 ContainerName:63b6fba2c0e9_logger Group: TS:2022-03-23 19:49:42.642963532 -0700 PDT Status:false}
+2022/03/04 17:29:00.238 [INFO]  {discovery} new event {ContainerID:391e28dd5cd6210d52d65883fd3aad62fbd3806a013c1fee7731307538139761 ContainerName:kafkafororder Group: TS:2022-03-23 19:49:43.238008078 -0700 PDT Status:true}
+2022/03/04 17:29:00.238 [INFO]  {app} loggers created for logs/kafkafororder.log and logs/kafkafororder.err, max.size=50M, max.files=10, max.days=20
+2022/03/04 17:29:00.238 [INFO]  {logger} start log streamer for kafkafororder
+2022/03/04 17:29:01.231 [INFO]  {discovery} new event {ContainerID:f399b232392fe6609cb8cb75393b75f4ec0901035ce2cd6aa7ef3325344c4b90 ContainerName:producerorder Group: TS:2022-03-23 19:49:44.230568898 -0700 PDT Status:true}
+2022/03/04 17:29:01.231 [INFO]  {app} loggers created for logs/producerorder.log and logs/producerorder.err, max.size=50M, max.files=10, max.days=20
+2022/03/04 17:29:01.231 [INFO]  {logger} start log streamer for producerorder
+2022/03/04 17:29:02.951 [INFO]  {discovery} new event {ContainerID:6aa9e624e747195f382b4ccd5368bf1b6406a2d4103a30ae98499b32face58e5 ContainerName:consumerorderkafka Group: TS:2022-03-23 19:49:45.951107691 -0700 PDT Status:true}
+2022/03/04 17:29:02.951 [INFO]  {app} loggers created for logs/consumerorderkafka.log and logs/consumerorderkafka.err, max.size=50M, max.files=10, max.days=20
+2022/03/04 17:29:02.951 [INFO]  {logger} start log streamer for consumerorderkafka
+2022/03/04 17:29:04.562 [INFO]  {discovery} new event {ContainerID:5356ad582c2477eeec570244e8e96a4f17277fd2581649bf0d1346f75f8180e5 ContainerName:producerorderkafka Group: TS:2022-03-23 19:49:47.561136086 -0700 PDT Status:true}
+2022/03/04 17:29:04.562 [INFO]  {app} loggers created for logs/producerorderkafka.log and logs/producerorderkafka.err, max.size=50M, max.files=10, max.days=20
+2022/03/04 17:29:04.562 [INFO]  {logger} start log streamer for producerorderkafka
+2022/03/04 17:30:41.956 [INFO]  {app} close logger stream for consumerorder
+2022/03/04 17:30:41.956 [INFO]  {app} close logger stream for kafkafororder
+2022/03/04 17:30:41.956 [INFO]  {app} close logger stream for producerorder
+timezone=America/Los_Angeles
+Fri Mar  4 17:34:10 PST 2022
+docker-logger --
+2022/03/04 17:34:10.992 [INFO]  {app} options: {DockerHost:unix:///var/run/docker.sock EnableSyslog:false SyslogHost:127.0.0.1:514 SyslogPrefix:docker/ EnableFiles:true MaxFileSize:50 MaxFilesCount:10 MaxFilesAge:20 MixErr:false FilesLocation:logs Excludes:[docker-logger] Includes:[] IncludesPattern: ExtJSON:false Dbg:false}
+2022/03/04 17:34:11.720 [INFO]  {discovery} new event {ContainerID:e4c8ae24d3b4140bd6f1c8978f0fbe7d22ed4d50748fd165c3b5c45734fce034 ContainerName:logger Group: TS:2022-03-23 19:54:55.719412284 -0700 PDT Status:true}
+2022/03/04 17:34:11.720 [INFO]  {app} loggers created for logs/logger.log and logs/logger.err, max.size=50M, max.files=10, max.days=20
+2022/03/04 17:34:11.720 [INFO]  {logger} start log streamer for logger
+2022/03/04 17:34:18.245 [INFO]  {discovery} new event {ContainerID:b8edb570d94e9ecdb533b09e3eced244d6344688328473dbb043ded1115931c3 ContainerName:orderdb Group: TS:2022-03-23 19:55:02.245099887 -0700 PDT Status:true}
+2022/03/04 17:34:18.245 [INFO]  {app} loggers created for logs/orderdb.log and logs/orderdb.err, max.size=50M, max.files=10, max.days=20
+2022/03/04 17:34:18.245 [INFO]  {logger} start log streamer for orderdb
+2022/03/04 17:34:18.291 [INFO]  {discovery} new event {ContainerID:35e3f99d86333f38de828d9eebf885eea792343f4d55e136eb4c7bdaa7967173 ContainerName:zoofororder Group: TS:2022-03-23 19:55:02.290758367 -0700 PDT Status:true}
+2022/03/04 17:34:18.291 [INFO]  {app} loggers created for logs/zoofororder.log and logs/zoofororder.err, max.size=50M, max.files=10, max.days=20
+2022/03/04 17:34:18.291 [INFO]  {logger} start log streamer for zoofororder
+2022/03/04 17:34:19.571 [INFO]  {app} close logger stream for orderdb
+2022/03/04 17:34:19.571 [INFO]  {app} close logger stream for zoofororder
+2022/03/04 17:34:19.572 [INFO]  {app} close logger stream for logger
+timezone=America/Los_Angeles
+Fri Mar  4 17:35:54 PST 2022
+docker-logger --
+2022/03/04 17:35:54.568 [INFO]  {app} options: {DockerHost:unix:///var/run/docker.sock EnableSyslog:false SyslogHost:127.0.0.1:514 SyslogPrefix:docker/ EnableFiles:true MaxFileSize:50 MaxFilesCount:10 MaxFilesAge:20 MixErr:false FilesLocation:logs Excludes:[docker-logger] Includes:[] IncludesPattern: ExtJSON:false Dbg:false}
+2022/03/04 17:35:54.660 [INFO]  {discovery} new event {ContainerID:e4c8ae24d3b4140bd6f1c8978f0fbe7d22ed4d50748fd165c3b5c45734fce034 ContainerName:logger Group: TS:2022-03-23 19:56:38.658286669 -0700 PDT Status:true}
+2022/03/04 17:35:54.660 [INFO]  {app} loggers created for logs/logger.log and logs/logger.err, max.size=50M, max.files=10, max.days=20
+2022/03/04 17:35:54.660 [INFO]  {logger} start log streamer for logger
+2022/03/04 17:36:07.017 [INFO]  {discovery} new event {ContainerID:e63d22025b66e72d7aba35a1dd0dbe50c35dc0cf2f4ff96fa78f4c9e009cc7d6 ContainerName:orderdb Group: TS:2022-03-23 19:56:51.017254875 -0700 PDT Status:true}
+2022/03/04 17:36:07.017 [INFO]  {app} loggers created for logs/orderdb.log and logs/orderdb.err, max.size=50M, max.files=10, max.days=20
+2022/03/04 17:36:07.017 [INFO]  {logger} start log streamer for orderdb
+2022/03/04 17:36:07.533 [INFO]  {discovery} new event {ContainerID:b8edb570d94e9ecdb533b09e3eced244d6344688328473dbb043ded1115931c3 ContainerName:b8edb570d94e_orderdb Group: TS:2022-03-23 19:56:51.533368967 -0700 PDT Status:false}
+2022/03/04 17:36:07.640 [INFO]  {discovery} new event {ContainerID:617d81a18d94ffbd224de72639619a9e944ce4178e293aa60ad4b607326df296 ContainerName:zoofororder Group: TS:2022-03-23 19:56:51.640478539 -0700 PDT Status:true}
+2022/03/04 17:36:07.640 [INFO]  {app} loggers created for logs/zoofororder.log and logs/zoofororder.err, max.size=50M, max.files=10, max.days=20
+2022/03/04 17:36:07.641 [INFO]  {logger} start log streamer for zoofororder
+2022/03/04 17:36:08.031 [INFO]  {discovery} new event {ContainerID:35e3f99d86333f38de828d9eebf885eea792343f4d55e136eb4c7bdaa7967173 ContainerName:35e3f99d8633_zoofororder Group: TS:2022-03-23 19:56:52.031343247 -0700 PDT Status:false}
+2022/03/04 17:36:21.246 [INFO]  {discovery} new event {ContainerID:6082394bf5cb7be7a0478f92979b4be10ee298f2e00763da5e45fab320ea4f73 ContainerName:consumerorder Group: TS:2022-03-23 19:57:05.245871391 -0700 PDT Status:true}
+2022/03/04 17:36:21.246 [INFO]  {app} loggers created for logs/consumerorder.log and logs/consumerorder.err, max.size=50M, max.files=10, max.days=20
+2022/03/04 17:36:21.246 [INFO]  {logger} start log streamer for consumerorder
+2022/03/04 17:36:22.268 [INFO]  {discovery} new event {ContainerID:a63e63a83c9d21fe92fb3c748e63a5b336f627b09adc5b737e21ea4dae329960 ContainerName:a63e63a83c9d_consumerorder Group: TS:2022-03-23 19:57:06.267070872 -0700 PDT Status:false}
+2022/03/04 17:36:22.858 [INFO]  {discovery} new event {ContainerID:f141b9c6c5b33b36c71706458742cc4d81e87fa2b9dca662ed2ac88cdab421ac ContainerName:kafkafororder Group: TS:2022-03-23 19:57:06.857906059 -0700 PDT Status:true}
+2022/03/04 17:36:22.858 [INFO]  {app} loggers created for logs/kafkafororder.log and logs/kafkafororder.err, max.size=50M, max.files=10, max.days=20
+2022/03/04 17:36:22.858 [INFO]  {logger} start log streamer for kafkafororder
+2022/03/04 17:36:24.266 [INFO]  {discovery} new event {ContainerID:391e28dd5cd6210d52d65883fd3aad62fbd3806a013c1fee7731307538139761 ContainerName:391e28dd5cd6_kafkafororder Group: TS:2022-03-23 19:57:08.265093929 -0700 PDT Status:false}
+2022/03/04 17:36:41.817 [INFO]  {discovery} new event {ContainerID:4c7315b64d76ad83cbd31790675116d98f51e98397c5b71585197d0a66ef2c2f ContainerName:producerorder Group: TS:2022-03-23 19:57:25.81323826 -0700 PDT Status:true}
+2022/03/04 17:36:41.817 [INFO]  {app} loggers created for logs/producerorder.log and logs/producerorder.err, max.size=50M, max.files=10, max.days=20
+2022/03/04 17:36:41.817 [INFO]  {logger} start log streamer for producerorder
+2022/03/04 17:36:42.132 [INFO]  {discovery} new event {ContainerID:f399b232392fe6609cb8cb75393b75f4ec0901035ce2cd6aa7ef3325344c4b90 ContainerName:f399b232392f_producerorder Group: TS:2022-03-23 19:57:26.130690968 -0700 PDT Status:false}
+2022/03/04 17:36:42.184 [INFO]  {discovery} new event {ContainerID:11117c55bd62220aadde45e803dc17dcfa2a78dbbdf76af844bdfd2f91a6928e ContainerName:consumerorderkafka Group: TS:2022-03-23 19:57:26.181173299 -0700 PDT Status:true}
+2022/03/04 17:36:42.185 [INFO]  {app} loggers created for logs/consumerorderkafka.log and logs/consumerorderkafka.err, max.size=50M, max.files=10, max.days=20
+2022/03/04 17:36:42.185 [INFO]  {logger} start log streamer for consumerorderkafka
+2022/03/04 17:36:42.357 [INFO]  {discovery} new event {ContainerID:6aa9e624e747195f382b4ccd5368bf1b6406a2d4103a30ae98499b32face58e5 ContainerName:6aa9e624e747_consumerorderkafka Group: TS:2022-03-23 19:57:26.356959039 -0700 PDT Status:false}
+2022/03/04 17:37:01.444 [INFO]  {discovery} new event {ContainerID:fe0ef6c42836e408887a514ed37f065f7dbf33896d306bce78b3867ebfa67c82 ContainerName:producerorderkafka Group: TS:2022-03-23 19:57:45.442542803 -0700 PDT Status:true}
+2022/03/04 17:37:01.444 [INFO]  {app} loggers created for logs/producerorderkafka.log and logs/producerorderkafka.err, max.size=50M, max.files=10, max.days=20
+2022/03/04 17:37:01.444 [INFO]  {logger} start log streamer for producerorderkafka
+2022/03/04 17:37:01.917 [INFO]  {discovery} new event {ContainerID:5356ad582c2477eeec570244e8e96a4f17277fd2581649bf0d1346f75f8180e5 ContainerName:5356ad582c24_producerorderkafka Group: TS:2022-03-23 19:57:45.916552498 -0700 PDT Status:false}
+2022/03/04 17:39:54.414 [INFO]  {discovery} new event {ContainerID:4c7315b64d76ad83cbd31790675116d98f51e98397c5b71585197d0a66ef2c2f ContainerName:producerorder Group: TS:2022-03-23 20:00:38.412990723 -0700 PDT Status:false}
+2022/03/04 17:39:54.414 [WARN]  {logger} stream from 4c7315b64d76ad83cbd31790675116d98f51e98397c5b71585197d0a66ef2c2f terminated with error context canceled
+2022/03/04 17:39:54.455 [INFO]  {discovery} new event {ContainerID:fe0ef6c42836e408887a514ed37f065f7dbf33896d306bce78b3867ebfa67c82 ContainerName:producerorderkafka Group: TS:2022-03-23 20:00:38.455692912 -0700 PDT Status:false}
+2022/03/04 17:39:54.456 [WARN]  {logger} stream from fe0ef6c42836e408887a514ed37f065f7dbf33896d306bce78b3867ebfa67c82 terminated with error context canceled
+2022/03/04 17:39:59.998 [INFO]  {discovery} new event {ContainerID:4c7315b64d76ad83cbd31790675116d98f51e98397c5b71585197d0a66ef2c2f ContainerName:producerorder Group: TS:2022-03-23 20:00:43.998509661 -0700 PDT Status:false}
+2022/03/04 17:40:00.032 [INFO]  {discovery} new event {ContainerID:fe0ef6c42836e408887a514ed37f065f7dbf33896d306bce78b3867ebfa67c82 ContainerName:producerorderkafka Group: TS:2022-03-23 20:00:44.032235384 -0700 PDT Status:false}
+2022/03/04 17:40:00.320 [INFO]  {discovery} new event {ContainerID:6082394bf5cb7be7a0478f92979b4be10ee298f2e00763da5e45fab320ea4f73 ContainerName:consumerorder Group: TS:2022-03-23 20:00:44.319592962 -0700 PDT Status:false}
+2022/03/04 17:40:00.320 [WARN]  {logger} stream from 6082394bf5cb7be7a0478f92979b4be10ee298f2e00763da5e45fab320ea4f73 terminated with error context canceled
+2022/03/04 17:40:00.372 [INFO]  {discovery} new event {ContainerID:11117c55bd62220aadde45e803dc17dcfa2a78dbbdf76af844bdfd2f91a6928e ContainerName:consumerorderkafka Group: TS:2022-03-23 20:00:44.372448582 -0700 PDT Status:false}
+2022/03/04 17:40:00.372 [WARN]  {logger} stream from 11117c55bd62220aadde45e803dc17dcfa2a78dbbdf76af844bdfd2f91a6928e terminated with error context canceled
+2022/03/04 17:40:05.041 [INFO]  {discovery} new event {ContainerID:6082394bf5cb7be7a0478f92979b4be10ee298f2e00763da5e45fab320ea4f73 ContainerName:consumerorder Group: TS:2022-03-23 20:00:49.040554657 -0700 PDT Status:false}
+2022/03/04 17:40:05.481 [INFO]  {discovery} new event {ContainerID:11117c55bd62220aadde45e803dc17dcfa2a78dbbdf76af844bdfd2f91a6928e ContainerName:consumerorderkafka Group: TS:2022-03-23 20:00:49.481372095 -0700 PDT Status:false}
+2022/03/04 17:40:14.980 [INFO]  {discovery} new event {ContainerID:e63d22025b66e72d7aba35a1dd0dbe50c35dc0cf2f4ff96fa78f4c9e009cc7d6 ContainerName:orderdb Group: TS:2022-03-23 20:00:58.980536937 -0700 PDT Status:false}
+2022/03/04 17:40:14.980 [WARN]  {logger} stream from e63d22025b66e72d7aba35a1dd0dbe50c35dc0cf2f4ff96fa78f4c9e009cc7d6 terminated with error context canceled
+2022/03/04 17:40:16.595 [INFO]  {discovery} new event {ContainerID:f141b9c6c5b33b36c71706458742cc4d81e87fa2b9dca662ed2ac88cdab421ac ContainerName:kafkafororder Group: TS:2022-03-23 20:01:00.59388445 -0700 PDT Status:false}
+2022/03/04 17:40:16.595 [WARN]  {logger} stream from f141b9c6c5b33b36c71706458742cc4d81e87fa2b9dca662ed2ac88cdab421ac terminated with error context canceled
+2022/03/04 17:40:23.603 [INFO]  {discovery} new event {ContainerID:e63d22025b66e72d7aba35a1dd0dbe50c35dc0cf2f4ff96fa78f4c9e009cc7d6 ContainerName:orderdb Group: TS:2022-03-23 20:01:07.603318789 -0700 PDT Status:false}
+2022/03/04 17:40:23.904 [INFO]  {discovery} new event {ContainerID:f141b9c6c5b33b36c71706458742cc4d81e87fa2b9dca662ed2ac88cdab421ac ContainerName:kafkafororder Group: TS:2022-03-23 20:01:07.90346651 -0700 PDT Status:false}
+2022/03/04 17:40:24.554 [INFO]  {discovery} new event {ContainerID:617d81a18d94ffbd224de72639619a9e944ce4178e293aa60ad4b607326df296 ContainerName:zoofororder Group: TS:2022-03-23 20:01:08.55388131 -0700 PDT Status:false}
+2022/03/04 17:40:24.554 [WARN]  {logger} stream from 617d81a18d94ffbd224de72639619a9e944ce4178e293aa60ad4b607326df296 terminated with error context canceled
+2022/03/04 17:40:27.504 [INFO]  {discovery} new event {ContainerID:617d81a18d94ffbd224de72639619a9e944ce4178e293aa60ad4b607326df296 ContainerName:zoofororder Group: TS:2022-03-23 20:01:11.504227656 -0700 PDT Status:false}
