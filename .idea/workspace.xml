@@ -5,6 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc4fa12d-cca4-45de-b358-b35d12c347fc" name="Changes" comment="init">
+      <change afterPath="$PROJECT_DIR$/log/consumerorder.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/consumerorderkafka.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/kafkafororder.err" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/kafkafororder.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/logger.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/orderdb.err" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/orderdb.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/producerorder.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/producerorderkafka.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/zoofororder.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/logs/docker-compose.yml" afterDir="false" />
@@ -75,6 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1646437828835</updated>
       <workItem from="1646437832965" duration="3108000" />
+      <workItem from="1646445012694" duration="344000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1646439218806</created>
@@ -118,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646440116075</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="init">
+      <created>1646445357409</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1646445357409</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
